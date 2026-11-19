@@ -7,7 +7,12 @@
 <meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب لولادك في مكان واحد: لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
 <meta property="og:title" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج">
 <meta property="og:description" content="8 ألعاب في مكان واحد، بمنهج علمي وإشراف عميد سابق لكلية علوم الرياضة. احجز حصة مجانية.">
-<meta property="og:image" content="assets/logo.jpg">
+<meta property="og:image" content="https://mahmodshaban90-jpg.github.io/icon-sohag/assets/logo.jpg">
+<meta property="og:url" content="https://mahmodshaban90-jpg.github.io/icon-sohag/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_EG">
+<link rel="canonical" href="https://mahmodshaban90-jpg.github.io/icon-sohag/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SportsActivityLocation","name":"أكاديمية أيكون للألعاب الرياضية - فرع سوهاج","url":"https://mahmodshaban90-jpg.github.io/icon-sohag/","logo":"https://mahmodshaban90-jpg.github.io/icon-sohag/assets/logo.jpg","telephone":"+201151699699","address":{"@type":"PostalAddress","addressLocality":"سوهاج","addressCountry":"EG"},"sameAs":["https://www.facebook.com/profile.php?id=100063880390677"]}</script>
 <meta name="theme-color" content="#00A82D">
 <link rel="icon" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/logo-180.png">
@@ -558,7 +563,8 @@ const CONFIG = {
   instapayLink: "",    // لينك الدفع المباشر من تطبيق إنستاباي لو موجود
   wallet: "",          // رقم محفظة لو موجود
   address: "سوهاج — العنوان والخريطة هيتضافوا قريب",
-  mapLink: ""
+  mapLink: "",       // لينك جوجل مابس
+  fbPixelId: ""      // رقم بيكسل فيسبوك (من Meta Business) عشان الريتارجت
 };
 // price: السعر بالجنيه (null = اسأل على واتساب). ages/days/time: نص حر. img: كود صورة Unsplash
 const SPORTS = [
@@ -730,6 +736,13 @@ form.addEventListener("submit", e => {
 function copy(t){ const ok = () => toast("اتنسخ: " + t); try { navigator.clipboard.writeText(t).then(ok, () => toast(t)); } catch (e) { toast(t); } }
 let tt;
 function toast(m){ const el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(() => el.hidden = true, 2200); }
+
+// facebook pixel (يشتغل بس لو fbPixelId متكتب)
+if (CONFIG.fbPixelId){
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', CONFIG.fbPixelId); fbq('track', 'PageView');
+  document.addEventListener('click', e => { const a = e.target.closest('a[href*="wa.me"]'); if (a) fbq('track', 'Contact'); });
+}
 
 // header shadow
 const nav = $("#nav");

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mahmodshaban90-jpg.github.io/icon-sohag/sitemap.xml
