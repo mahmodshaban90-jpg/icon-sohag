@@ -200,6 +200,8 @@ header.nav .btn{padding:11px 20px;font-size:14px}
 .person .tx{padding:28px;display:grid;gap:10px;align-content:center}
 .person .role{display:inline-block;width:max-content;background:var(--green);color:#fff;font-family:var(--f-display);font-weight:700;font-size:13px;border-radius:999px;padding:4px 14px}
 .person:nth-child(2) .role{background:var(--sun);color:var(--ink)}
+.person:nth-child(3) .role{background:var(--sky)}
+.person.wide{grid-column:1/-1;max-width:640px;width:100%;justify-self:center}
 .person h3{font-size:26px;font-weight:900}
 .person p{color:var(--muted);font-size:16px}
 @media (max-width:1000px){.staff{grid-template-columns:1fr}}
@@ -440,6 +442,14 @@ footer .credit a{color:#C9D3CD}
             <p>عضو هيئة التدريس بقسم الإدارة الرياضية. مسؤول عن تنظيم المواعيد والاشتراكات والتواصل مع أولياء الأمور.</p>
           </div>
         </article>
+        <article class="person wide rv d2">
+          <div class="ph"><img src="assets/mahmoud.jpg" alt="محمود شعبان" loading="lazy"></div>
+          <div class="tx">
+            <span class="role">مدير الدعاية والتسويق</span>
+            <h3>محمود شعبان</h3>
+            <p>مسؤول عن الدعاية والتسويق والتواصل على السوشيال ميديا، وأي استفسار عن العروض والفعاليات.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -559,23 +569,23 @@ const CONFIG = {
   whatsappReceipts: "201151699699",  // استلام إيصالات الدفع
   phone: "01151699699",              // موبايل وانستجرام
   facebook: "https://www.facebook.com/profile.php?id=100063880390677",
-  instapay: "",        // مثال: "iconsohag@instapay" — لو فاضي بيظهر "هتوصلك على واتساب"
+  instapay: "01151699699", // رقم إنستاباي
   instapayLink: "",    // لينك الدفع المباشر من تطبيق إنستاباي لو موجود
   wallet: "",          // رقم محفظة لو موجود
-  address: "سوهاج — العنوان والخريطة هيتضافوا قريب",
-  mapLink: "",       // لينك جوجل مابس
+  address: "ملاعب المدينة الجامعية (طالبات) - سوهاج",
+  mapLink: "https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%D9%85%D8%AF%D9%8A%D9%86%D8%A9+%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D8%B9%D9%8A%D8%A9+%D8%B7%D8%A7%D9%84%D8%A8%D8%A7%D8%AA+%D8%B3%D9%88%D9%87%D8%A7%D8%AC", // لينك جوجل مابس
   fbPixelId: ""      // رقم بيكسل فيسبوك (من Meta Business) عشان الريتارجت
 };
 // price: السعر بالجنيه (null = اسأل على واتساب). ages/days/time: نص حر. img: كود صورة Unsplash
 const SPORTS = [
-  {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية.", ages:"", days:"", time:"", price:null},
-  {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:null},
-  {id:"tennis",  name:"تنس أرضي",    img:"WRByZhruW6o", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:null},
-  {id:"tt",      name:"تنس طاولة",   img:"7h9wGq4IUdE", desc:"سرعة بديهة ودقة وتركيز، ومتعة لكل الأعمار.", ages:"", days:"", time:"", price:null},
-  {id:"volley",  name:"كرة طائرة",   img:"aZVpxRydiJk", desc:"روح الفريق والقفز والتوقيت، للبنات والولاد.", ages:"", days:"", time:"", price:null},
-  {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي للطفل اللي طاقته عالية.", ages:"", days:"", time:"", price:null},
-  {id:"basket",  name:"كرة سلة",     img:"jbsr6R7CRik", desc:"رشاقة ومهارة وتحكم في الكورة وقرار سريع.", ages:"", days:"", time:"", price:null},
-  {id:"karate",  name:"كاراتيه",     img:"ryOMte-FerE", desc:"انضباط واحترام ودفاع عن النفس، بأحزمة ومستويات.", ages:"", days:"", time:"", price:null}
+  {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية.", ages:"", days:"", time:"", price:300},
+  {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:250},
+  {id:"tennis",  name:"تنس أرضي",    img:"WRByZhruW6o", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:300},
+  {id:"tt",      name:"تنس طاولة",   img:"7h9wGq4IUdE", desc:"سرعة بديهة ودقة وتركيز، ومتعة لكل الأعمار.", ages:"", days:"", time:"", price:250},
+  {id:"volley",  name:"كرة طائرة",   img:"aZVpxRydiJk", desc:"روح الفريق والقفز والتوقيت، للبنات والولاد.", ages:"", days:"", time:"", price:250},
+  {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي للطفل اللي طاقته عالية.", ages:"", days:"", time:"", price:250},
+  {id:"basket",  name:"كرة سلة",     img:"jbsr6R7CRik", desc:"رشاقة ومهارة وتحكم في الكورة وقرار سريع.", ages:"", days:"", time:"", price:250},
+  {id:"karate",  name:"كاراتيه",     img:"ryOMte-FerE", desc:"انضباط واحترام ودفاع عن النفس، بأحزمة ومستويات.", ages:"", days:"", time:"", price:250}
 ];
 /* ================================================= */
 
