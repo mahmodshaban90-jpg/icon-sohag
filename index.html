@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>أكاديمية أيكون سوهاج</title>
+<meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب تحت إشراف أكاديمي: لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
+<meta property="og:title" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج">
+<meta property="og:description" content="8 ألعاب في مكان واحد، بمنهج علمي وإشراف عميد سابق لكلية علوم الرياضة. احجز حصة مجانية.">
+<meta property="og:image" content="assets/logo-on-dark.png">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;900&family=Tajawal:wght@400;500;700&family=Bebas+Neue&display=swap">
+<style>
+/* Layout: dark arena. Black ground, Icon-green "wave" swoosh as the signature, silver metal for numbers and badges. Single dark look by brand choice. */
+:root{
+  --ink:#0E0F0E; --ink-2:#151816; --ink-3:#1D211F; --line:#2A302C;
+  --green:#00A82D; --green-hi:#1FC94A; --neon:#39FF6A;
+  --silver-1:#E4E7EA; --silver-2:#C9CCCF; --silver-3:#6E7378;
+  --fg:#F3F5F3; --muted:#A3ABA6;
+  --f-display:"Alexandria","Tajawal",system-ui,sans-serif;
+  --f-body:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;
+  --f-num:"Bebas Neue","Alexandria",Impact,sans-serif;
+  --r:14px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.7;direction:rtl;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+img{max-width:100%;display:block}
+h1,h2,h3{font-family:var(--f-display);line-height:1.25;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:88px}
+.eyebrow{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--green-hi);letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px}
+.eyebrow::before{content:"";width:28px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--neon),var(--green))}
+.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:720px}
+.sec-head h2{font-size:clamp(28px,4.4vw,44px);font-weight:900}
+.sec-head p{color:var(--muted);font-size:18px}
+.metal{background:linear-gradient(180deg,var(--silver-1) 0%,var(--silver-2) 45%,var(--silver-3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .15s ease,background .2s ease,box-shadow .2s ease}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 8px 30px -10px rgba(0,168,45,.8)}
+.btn-green:hover{background:var(--green-hi);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--silver-3)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,15,14,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand img{height:44px;width:auto}
+.brand span{font-family:var(--f-display);font-weight:700;font-size:15px;line-height:1.2}
+.brand small{display:block;color:var(--muted);font-weight:500;font-size:12px}
+.nav{display:flex;gap:22px;font-family:var(--f-display);font-size:14px;font-weight:500}
+.nav a{text-decoration:none;color:var(--muted)}
+.nav a:hover{color:var(--fg)}
+.top .btn{padding:10px 18px;font-size:14px}
+@media (max-width:900px){.nav{display:none}}
+
+/* hero */
+.hero{position:relative;padding-block:64px 40px;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
+.hero-copy{display:grid;gap:22px;min-width:0}
+.badge{display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:100%;padding:7px 14px 7px 16px;border-radius:999px;font-size:13px;font-family:var(--f-display);font-weight:500;color:var(--ink);background:linear-gradient(180deg,var(--silver-1),var(--silver-2) 60%,#9EA3A8)}
+.badge b{background:var(--ink);color:var(--neon);border-radius:999px;padding:2px 10px;font-weight:700}
+.hero h1{font-size:clamp(36px,6.4vw,74px);font-weight:900;letter-spacing:-.01em}
+.hero h1 .g{color:var(--green-hi)}
+.hero .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:560px}
+.hero .lead strong{color:var(--fg)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px}
+.hero-art{position:relative;display:grid;place-items:center;min-width:0}
+.hero-art .ring{position:absolute;width:min(420px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(57,255,106,.22),rgba(0,168,45,.08) 45%,transparent 70%)}
+.hero-art img{position:relative;width:min(340px,80%);filter:drop-shadow(0 30px 50px rgba(0,0,0,.6));animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-12px) rotate(-2deg)}}
+.swoosh{position:absolute;bottom:-40px;right:-10%;width:120%;height:220px;pointer-events:none;opacity:.9}
+.sports-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.sports-strip span{font-size:13px;font-family:var(--f-display);padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--silver-2);background:var(--ink-2)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1}.hero-art img{width:min(170px,48%)}}
+
+/* proof band */
+.proof{border-block:1px solid var(--line);background:var(--ink-2);padding-block:28px}
+.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.proof div{display:grid;gap:2px}
+.proof .n{font-family:var(--f-num);font-size:48px;line-height:1}
+.proof .t{color:var(--muted);font-size:15px}
+@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(2,1fr)}}
+
+/* sports */
+.sports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sport{position:relative;display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;padding:22px;border-radius:var(--r);background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);overflow:hidden;min-width:0;transition:border-color .2s,transform .2s}
+.sport:hover{border-color:rgba(31,201,74,.6);transform:translateY(-3px)}
+.sport .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:rgba(0,168,45,.12);color:var(--neon)}
+.sport .ic svg{width:34px;height:34px}
+.sport h3{font-size:21px;font-weight:700}
+.sport p{color:var(--muted);font-size:15px;line-height:1.65}
+.sport .meta{display:grid;gap:4px;font-size:13px;color:var(--silver-2);border-top:1px dashed var(--line);padding-top:12px}
+.sport .meta b{color:var(--fg);font-weight:500}
+.sport .go{margin-top:4px;justify-self:start;background:none;border:0;color:var(--green-hi);font-family:var(--f-display);font-weight:700;font-size:14px;cursor:pointer;padding:6px 0;display:inline-flex;gap:6px;align-items:center}
+.sport .go:hover{color:var(--neon)}
+.sport .num{position:absolute;top:14px;left:18px;font-family:var(--f-num);font-size:30px;color:var(--line)}
+@media (max-width:1000px){.sports-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.sports-grid{grid-template-columns:1fr}}
+
+/* quiz */
+.quiz-sec{background:radial-gradient(1200px 400px at 85% 0%,rgba(0,168,45,.14),transparent 60%),var(--ink)}
+.quiz{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
+.quiz-card{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:28px;min-width:0}
+.q-prog{display:flex;gap:6px;margin-bottom:22px}
+.q-prog i{flex:1;height:5px;border-radius:5px;background:var(--line)}
+.q-prog i.on{background:var(--green)}
+.q-title{font-family:var(--f-display);font-weight:700;font-size:22px;margin-bottom:18px}
+.q-opts{display:grid;gap:10px}
+.q-opts button{text-align:right;font-family:var(--f-body);font-size:17px;color:var(--fg);background:var(--ink-3);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s}
+.q-opts button:hover{border-color:var(--green);background:rgba(0,168,45,.08)}
+.q-result{display:grid;gap:14px}
+.q-result .pick{font-family:var(--f-display);font-weight:900;font-size:34px;color:var(--neon)}
+.q-result .alt{color:var(--muted)}
+.q-step{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:var(--f-display)}
+@media (max-width:860px){.quiz{grid-template-columns:1fr}}
+
+/* directors */
+.staff{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.person{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:18px;min-width:0}
+.person .ph{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--ink-3)}
+.person .ph img{width:100%;height:100%;object-fit:cover}
+.person .ph::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--neon),var(--green))}
+.person .role{font-family:var(--f-display);font-size:13px;font-weight:700;color:var(--ink);background:linear-gradient(180deg,var(--silver-1),var(--silver-2));border-radius:999px;padding:3px 12px;width:max-content}
+.person h3{font-size:24px;font-weight:900;margin-top:10px}
+.person p{color:var(--muted);margin-top:8px;font-size:16px}
+@media (max-width:980px){.staff{grid-template-columns:1fr}}
+@media (max-width:520px){.person{grid-template-columns:1fr}.person .ph{max-width:260px}}
+
+/* method */
+.method{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.method div{padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--ink-2);display:grid;gap:8px;min-width:0}
+.method h3{font-size:19px;font-weight:700}
+.method p{color:var(--muted);font-size:15px}
+.method .k{font-family:var(--f-num);font-size:22px;color:var(--green-hi);letter-spacing:.04em}
+@media (max-width:860px){.method{grid-template-columns:1fr}}
+
+/* schedule */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:15px}
+th,td{padding:14px 16px;text-align:right;border-bottom:1px solid var(--line)}
+th{font-family:var(--f-display);font-weight:700;background:var(--ink-3);color:var(--silver-2);font-size:14px}
+tr:last-child td{border-bottom:0}
+td.soon{color:var(--muted)}
+.note{color:var(--muted);font-size:14px;margin-top:12px}
+
+/* join / payment */
+.join{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.panel{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:28px;min-width:0}
+.steps{display:grid;gap:16px;counter-reset:s;margin:0;padding:0;list-style:none}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
+.steps li::before{counter-increment:s;content:counter(s);font-family:var(--f-num);font-size:26px;line-height:44px;text-align:center;border-radius:12px;background:var(--ink-3);border:1px solid var(--line);color:var(--neon)}
+.steps b{font-family:var(--f-display);display:block;font-size:17px}
+.steps span{color:var(--muted);font-size:15px}
+form{display:grid;gap:14px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+label{display:grid;gap:6px;font-family:var(--f-display);font-size:14px;font-weight:500;color:var(--silver-2)}
+input,select{font:inherit;font-size:16px;color:var(--fg);background:var(--ink);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
+input:focus,select:focus{border-color:var(--green);outline:none}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg input{position:absolute;top:0;right:0;width:1px;height:1px;opacity:0;pointer-events:none}
+.seg label{cursor:pointer;text-align:center;padding:12px;border:1.5px solid var(--line);border-radius:12px;color:var(--fg);font-size:15px;display:block}
+.seg input:checked+label{border-color:var(--green);background:rgba(0,168,45,.12)}
+.seg input:focus-visible+label{outline:3px solid var(--neon);outline-offset:2px}
+.err{color:#FF8A8A;font-size:14px;min-height:1em}
+.pay{display:grid;gap:16px}
+.pay .sum{display:grid;gap:6px;padding:16px;border-radius:14px;background:var(--ink);border:1px dashed var(--line);font-size:15px}
+.pay .sum div{display:flex;justify-content:space-between;gap:12px}
+.pay .sum b{font-weight:700}
+.pay .amount{font-family:var(--f-num);font-size:40px;color:var(--neon);line-height:1}
+.payline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:14px;background:var(--ink-3)}
+.payline .lbl{font-size:13px;color:var(--muted)}
+.payline .val{font-family:var(--f-num);font-size:26px;letter-spacing:.04em;direction:ltr}
+.copy{background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer;font-family:var(--f-display);font-size:13px}
+.copy:hover{border-color:var(--green)}
+@media (max-width:900px){.join{grid-template-columns:1fr}}
+@media (max-width:460px){.row2{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.contact a,.contact div{display:grid;gap:4px;padding:22px;border-radius:var(--r);border:1px solid var(--line);background:var(--ink-2);text-decoration:none;min-width:0}
+.contact a:hover{border-color:var(--green)}
+.contact .lbl{color:var(--muted);font-size:14px}
+.contact .val{font-family:var(--f-display);font-weight:700;font-size:19px;overflow-wrap:anywhere}
+.contact .val.ltr{direction:ltr;text-align:right;font-family:var(--f-num);font-size:28px;letter-spacing:.03em;font-weight:400}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:36px calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
+footer img{height:56px;width:auto}
+
+/* floating whatsapp */
+.fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);text-decoration:none}
+.fab svg{width:32px;height:32px;fill:#fff}
+.fab::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;opacity:.5;animation:pulse 2.2s ease-out infinite}
+@keyframes pulse{to{inset:-16px;opacity:0}}
+.toast{position:fixed;bottom:calc(92px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--fg);color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--f-display);font-size:14px;z-index:80}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#home" aria-label="أكاديمية أيكون - الرئيسية">
+      <img src="assets/mark.png" alt="" width="40" height="44">
+      <span>أكاديمية أيكون<small>فرع سوهاج</small></span>
+    </a>
+    <nav class="nav" aria-label="أقسام الموقع">
+      <a href="#sports">ألعابنا</a>
+      <a href="#quiz">اختبار اللعبة</a>
+      <a href="#staff">الإدارة الفنية</a>
+      <a href="#schedule">المواعيد</a>
+      <a href="#join">الاشتراك</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+    <a class="btn btn-green js-trial" href="#" target="_blank" rel="noopener">احجز حصة مجانية</a>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <svg class="swoosh" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#39FF6A" stop-opacity="0"/><stop offset=".45" stop-color="#00A82D" stop-opacity=".55"/><stop offset="1" stop-color="#39FF6A" stop-opacity=".1"/></linearGradient></defs>
+      <path d="M0 170 C 300 60, 520 230, 800 120 S 1120 40, 1200 90 L1200 110 C 1110 70, 960 150, 800 150 S 300 110, 0 200 Z" fill="url(#sw)"/>
+    </svg>
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="badge"><b>توكيل رسمي</b> من أيكون للألعاب الرياضية</span>
+        <h1>أيكون وصلت سوهاج.<br><span class="g">ابنك يستاهل يبقى أيكون.</span></h1>
+        <p class="lead">8 ألعاب في مكان واحد، بمنهج تدريب علمي وتحت إشراف <strong>أ.د. أحمد عبدالله</strong>، عميد كلية علوم الرياضة سابقاً. أول حصة لابنك أو بنتك عندنا مجاناً.</p>
+        <div class="cta-row">
+          <a class="btn btn-green js-trial" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.2-.3-.3-.6-.5Z"/></svg>
+            احجز حصة مجانية على واتساب
+          </a>
+          <a class="btn btn-ghost" href="#quiz">ابنك ينفع في أنهي لعبة؟</a>
+        </div>
+        <div class="sports-strip" aria-label="الألعاب المتاحة">
+          <span>لياقة بدنية</span><span>جمباز</span><span>تنس أرضي</span><span>تنس طاولة</span><span>كرة طائرة</span><span>كرة يد</span><span>كرة سلة</span><span>كاراتيه</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="ring"></div>
+        <img src="assets/logo-on-dark-sm.png" alt="شعار أيكون للألعاب الرياضية" width="340" height="456">
+      </div>
+    </div>
+  </section>
+
+  <div class="proof">
+    <div class="wrap">
+      <div><span class="n metal">8</span><span class="t">ألعاب في مكان واحد</span></div>
+      <div><span class="n metal">1</span><span class="t">مشوار لكل إخواتك</span></div>
+      <div><span class="n metal">100%</span><span class="t">منهج علمي من كلية علوم الرياضة</span></div>
+      <div><span class="n metal">0</span><span class="t">جنيه للحصة التجريبية الأولى</span></div>
+    </div>
+  </div>
+
+  <section id="sports">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">ألعابنا</span>
+        <h2>اختار اللعبة اللي تناسب ابنك</h2>
+        <p>كل لعبة ليها مدرب متخصص وبرنامج متدرّج حسب السن والمستوى. اضغط «احجز» وهنكمّل معاك.</p>
+      </div>
+      <div class="sports-grid" id="sportsGrid"></div>
+    </div>
+  </section>
+
+  <section id="quiz" class="quiz-sec">
+    <div class="wrap quiz">
+      <div class="sec-head" style="margin:0">
+        <span class="eyebrow">اختبار سريع</span>
+        <h2>ابنك ينفع في أنهي لعبة؟</h2>
+        <p>5 أسئلة بسيطة عن شخصية ابنك أو بنتك، وفي الآخر هنرشّحلك اللعبة الأنسب. وفي أول حصة الكابتن هيعمل تقييم حقيقي ويأكد الاختيار.</p>
+      </div>
+      <div class="quiz-card" id="quizCard" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section id="staff">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">الإدارة الفنية</span>
+        <h2>تدريب بمنهج علمي، مش بالفهلوة</h2>
+        <p>الأكاديمية بيديرها أساتذة من كلية علوم الرياضة. ده معناه برامج تدريب مدروسة، متابعة لمستوى كل طفل، وأمان في كل تمرين.</p>
+      </div>
+      <div class="staff">
+        <article class="person">
+          <div class="ph"><img src="assets/dr-ahmed.jpg" alt="أ.د. أحمد عبدالله" width="480" height="640" loading="lazy"></div>
+          <div>
+            <span class="role">المدير الفني</span>
+            <h3>أ.د. أحمد عبدالله</h3>
+            <p>أستاذ ورئيس قسم التدريب الرياضي، وعميد كلية علوم الرياضة سابقاً. بيشرف بنفسه على برامج التدريب ومستويات اللاعبين في كل الألعاب.</p>
+          </div>
+        </article>
+        <article class="person">
+          <div class="ph"><img src="assets/dr-elsayed.jpg" alt="د. السيد رفاعي" width="480" height="640" loading="lazy"></div>
+          <div>
+            <span class="role">المدير الإداري</span>
+            <h3>د. السيد رفاعي</h3>
+            <p>عضو هيئة التدريس بقسم الإدارة الرياضية. مسؤول عن تنظيم المواعيد والاشتراكات والتواصل مع أولياء الأمور.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="method">
+        <div><span class="k">تقييم</span><h3>اختبار لياقة في أول حصة</h3><p>سرعة، مرونة، توازن، وتوافق. بنعرف ابنك بيبدأ منين قبل ما نبدأ.</p></div>
+        <div><span class="k">متابعة</span><h3>تقرير مستوى كل شهر</h3><p>ولي الأمر بيوصله تقرير بتطور ابنه، عشان تشوف الفرق بعينك.</p></div>
+        <div><span class="k">أمان</span><h3>أحمال تدريب مناسبة للسن</h3><p>البرامج متصممة على أسس علمية تحمي الطفل من الإصابة والإجهاد.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" style="background:var(--ink-2);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">المواعيد والأسعار</span>
+        <h2>جدول التمرين</h2>
+        <p>المواعيد بتتحدد حسب السن والمستوى. اللي لسه مكتوب عنده «اسأل على واتساب» هنبعتلك تفاصيله فوراً.</p>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>اللعبة</th><th>الأعمار</th><th>الأيام</th><th>المعاد</th><th>الاشتراك الشهري</th></tr></thead>
+          <tbody id="schedBody"></tbody>
+        </table>
+      </div>
+      <p class="note">خصم للإخوات ولأولاد أعضاء هيئة التدريس بجامعة سوهاج. اسأل على العرض الحالي.</p>
+    </div>
+  </section>
+
+  <section id="join">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">الاشتراك والدفع</span>
+        <h2>اشترك وادفع من البيت</h2>
+        <p>من غير ما تيجي المكان: املا البيانات، ادفع بإنستاباي، وابعت صورة التحويل على واتساب. هنأكدلك الاشتراك في نفس اليوم.</p>
+      </div>
+      <div class="join">
+        <div class="panel">
+          <ol class="steps">
+            <li><div><b>اختار اللعبة وبيانات ابنك</b><span>الاسم والسن ورقم ولي الأمر.</span></div></li>
+            <li><div><b>ادفع بإنستاباي</b><span>هيظهرلك المبلغ وبيانات التحويل.</span></div></li>
+            <li><div><b>ابعت الإيصال على واتساب</b><span>رسالة جاهزة فيها كل البيانات، ترفق معاها سكرين شوت التحويل.</span></div></li>
+            <li><div><b>تأكيد الاشتراك</b><span>الإدارة بتراجع وتبعتلك التأكيد ومواعيد أول تمرين.</span></div></li>
+          </ol>
+        </div>
+        <div class="panel" id="joinPanel">
+          <form id="joinForm" novalidate>
+            <label for="fSport">اللعبة
+              <select id="fSport" required></select>
+            </label>
+            <div class="row2">
+              <label for="fName">اسم الطفل
+                <input id="fName" autocomplete="off" placeholder="مثلاً: يوسف أحمد" required>
+              </label>
+              <label for="fAge">السن
+                <input id="fAge" type="number" inputmode="numeric" min="3" max="18" placeholder="بالسنين" required>
+              </label>
+            </div>
+            <label for="fParent">اسم ولي الأمر
+              <input id="fParent" autocomplete="name" placeholder="الاسم بالكامل" required>
+            </label>
+            <label for="fPhone">موبايل ولي الأمر
+              <input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr" required>
+            </label>
+            <div>
+              <span style="font-family:var(--f-display);font-size:14px;color:var(--silver-2)">نوع الطلب</span>
+              <div class="seg" style="margin-top:6px">
+                <input type="radio" name="kind" id="kTrial" value="trial" checked><label for="kTrial">حصة تجريبية مجانية</label>
+                <input type="radio" name="kind" id="kSub" value="sub"><label for="kSub">اشتراك شهري</label>
+              </div>
+            </div>
+            <p class="err" id="fErr" role="alert"></p>
+            <button class="btn btn-green" type="submit">كمّل</button>
+          </form>
+          <div class="pay" id="payBox" hidden></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">تواصل معانا</span>
+        <h2>إحنا على بعد رسالة</h2>
+      </div>
+      <div class="contact">
+        <a class="js-wa" href="#" target="_blank" rel="noopener"><span class="lbl">واتساب الحجز</span><span class="val ltr" id="waNum"></span></a>
+        <a class="js-call" href="#"><span class="lbl">موبايل وانستجرام</span><span class="val ltr" id="callNum"></span></a>
+        <a id="fbLink" href="#" target="_blank" rel="noopener"><span class="lbl">صفحتنا على فيسبوك</span><span class="val">أكاديمية أيكون - فرع سوهاج</span></a>
+      </div>
+      <p class="note" id="addr"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo-on-dark-sm.png" alt="أيكون" width="42" height="56">
+    <span>أكاديمية أيكون للألعاب الرياضية - فرع سوهاج · توكيل رسمي</span>
+    <span>© <span id="yr"></span></span>
+  </div>
+</footer>
+
+<a class="fab js-wa" href="#" target="_blank" rel="noopener" aria-label="كلّمنا على واتساب">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.2-.3-.3-.6-.5Z"/></svg>
+</a>
+<div class="toast" id="toast" hidden></div>
+
+<script>
+/* ============ الإعدادات: عدّل هنا بس ============ */
+const CONFIG = {
+  whatsappBooking: "201500050252",   // زرار واتساب العائم والحجز
+  whatsappReceipts: "201151699699",  // استلام إيصالات الدفع
+  phone: "01151699699",              // موبايل وانستجرام
+  facebook: "https://www.facebook.com/profile.php?id=100063880390677",
+  instapay: "",        // مثال: "iconsohag@instapay" — لو فاضي بيظهر "هيتأكد على واتساب"
+  instapayLink: "",    // لينك الدفع المباشر من تطبيق إنستاباي (ipn.eg/...) لو موجود
+  wallet: "",          // رقم محفظة (فودافون كاش مثلاً) لو موجود
+  address: "سوهاج — العنوان والخريطة هيتضافوا قريب",
+  mapLink: ""
+};
+// السعر بالجنيه (null = اسأل على واتساب). الأعمار والأيام والمعاد نص حر.
+const SPORTS = [
+  {id:"fitness",  name:"لياقة بدنية", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية. مناسبة للكبار والصغار.", ages:"", days:"", time:"", price:null},
+  {id:"gym",      name:"جمباز",       desc:"مرونة وتوازن وثقة بالنفس من سن صغير. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:null},
+  {id:"tennis",   name:"تنس أرضي",    desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي، بمدربين متخصصين.", ages:"", days:"", time:"", price:null},
+  {id:"tt",       name:"تنس طاولة",   desc:"سرعة بديهة ودقة وتركيز. لعبة ممتعة ومناسبة لكل الأعمار.", ages:"", days:"", time:"", price:null},
+  {id:"volley",   name:"كرة طائرة",   desc:"روح الفريق والقفز والتوقيت. مناسبة جداً للبنات والولاد.", ages:"", days:"", time:"", price:null},
+  {id:"hand",     name:"كرة يد",      desc:"قوة وسرعة وشغل جماعي. لعبة الطفل اللي عنده طاقة عالية.", ages:"", days:"", time:"", price:null},
+  {id:"basket",   name:"كرة سلة",     desc:"طول ورشاقة ومهارة تحكم في الكورة، واتخاذ قرار سريع.", ages:"", days:"", time:"", price:null},
+  {id:"karate",   name:"كاراتيه",     desc:"انضباط واحترام ودفاع عن النفس، مع أحزمة ومستويات واضحة.", ages:"", days:"", time:"", price:null}
+];
+/* ================================================= */
+
+const ICONS = {
+  fitness:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 20v8M11 15v18M37 15v18M42 20v8M11 24h26"/></svg>',
+  gym:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="8" r="4"/><path d="M24 13v14M24 18 12 10M24 18l12-8M24 27l-9 15M24 27l9 15"/><path d="M8 40c6 2 10-4 16-2s10 4 16 0" stroke-width="2"/></svg>',
+  tennis:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M10 13c8 6 8 16 0 22M38 13c-8 6-8 16 0 22"/></svg>',
+  tt:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="m28 28 11 11"/><circle cx="38" cy="12" r="3.5" fill="currentColor"/></svg>',
+  volley:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M24 7c-2 10 2 16 12 21M7.5 27c8-2 13-8 13-18M14 38c6-7 14-9 24-6"/></svg>',
+  hand:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 7v6l-7 5 3 8h8l3-8-7-5M17 18l-9-2M31 18l9-2M20 26l-5 9M28 26l5 9"/></svg>',
+  basket:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7v34M12 12c6 6 6 18 0 24M36 12c-6 6-6 18 0 24"/></svg>',
+  karate:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h36M18 20l-6 20M30 20l6 20"/><path d="M20 14h8l2 6h-12z"/></svg>'
+};
+
+const $ = s => document.querySelector(s);
+const wa = (num, text) => "https://wa.me/" + num + (text ? "?text=" + encodeURIComponent(text) : "");
+const fmtNum = n => n.replace(/^20/, "0");
+const priceTxt = p => p == null ? "اسأل على واتساب" : p.toLocaleString("ar-EG") + " ج.م";
+
+// links
+document.querySelectorAll(".js-trial").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عايز أحجز حصة تجريبية مجانية في أكاديمية أيكون سوهاج"));
+document.querySelectorAll(".js-wa").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عندي استفسار عن أكاديمية أيكون سوهاج"));
+document.querySelectorAll(".js-call").forEach(a => a.href = "tel:+2" + CONFIG.phone);
+$("#waNum").textContent = fmtNum(CONFIG.whatsappBooking);
+$("#callNum").textContent = CONFIG.phone;
+$("#fbLink").href = CONFIG.facebook;
+$("#addr").textContent = "العنوان: " + CONFIG.address;
+$("#yr").textContent = new Date().getFullYear();
+
+// sports grid + schedule + select
+const grid = $("#sportsGrid"), sched = $("#schedBody"), sel = $("#fSport");
+SPORTS.forEach((s, i) => {
+  const el = document.createElement("article");
+  el.className = "sport";
+  el.innerHTML = `<span class="num">0${i+1}</span><div class="ic">${ICONS[s.id]}</div><h3>${s.name}</h3><p>${s.desc}</p>
+    <div class="meta"><span>الأعمار: <b>${s.ages || "حسب التقييم"}</b></span><span>الاشتراك: <b>${priceTxt(s.price)}</b></span></div>
+    <button class="go" type="button" data-id="${s.id}">احجز ${s.name} ←</button>`;
+  grid.appendChild(el);
+  const tr = document.createElement("tr");
+  const c = v => v ? `<td>${v}</td>` : `<td class="soon">اسأل على واتساب</td>`;
+  tr.innerHTML = `<td><b>${s.name}</b></td>${c(s.ages)}${c(s.days)}${c(s.time)}${c(s.price != null ? priceTxt(s.price) : "")}`;
+  sched.appendChild(tr);
+  const o = document.createElement("option"); o.value = s.id; o.textContent = s.name; sel.appendChild(o);
+});
+grid.addEventListener("click", e => {
+  const b = e.target.closest(".go"); if (!b) return;
+  pickSport(b.dataset.id);
+});
+function pickSport(id){
+  sel.value = id; resetJoin();
+  $("#join").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+  setTimeout(() => $("#fName").focus({preventScroll:true}), 500);
+}
+
+// quiz
+const QUIZ = [
+  {q:"ابنك/بنتك عنده طاقة إزاي؟", a:[["طاقة عالية جداً، مبيقعدش",{hand:2,basket:2,fitness:1,karate:1}],["نشيط بس بيحب يركز في حاجة",{tennis:2,tt:2}],["هادي ومرن وبيحب الحركات",{gym:3}]]},
+  {q:"بيحب يلعب لوحده ولا مع فريق؟", a:[["مع فريق وصحابه",{volley:2,basket:2,hand:2}],["لوحده ويتحدى نفسه",{tennis:2,tt:2,karate:1,gym:1}],["الاتنين عادي",{fitness:2}]]},
+  {q:"إيه أكتر حاجة نفسك تبنيها فيه؟", a:[["الثقة بالنفس والانضباط",{karate:3,gym:1}],["التركيز وسرعة البديهة",{tt:3,tennis:1}],["اللياقة والصحة العامة",{fitness:3}],["روح التعاون والقيادة",{volley:1,basket:1,hand:1}]]},
+  {q:"ابنك طوله بالنسبة لسنه؟", a:[["أطول من سنه",{basket:2,volley:2}],["متوسط",{hand:1,tennis:1,karate:1}],["أقصر وخفيف الحركة",{gym:2,tt:1}]]},
+  {q:"لما يتفرج على ماتش أو بطولة، بيتشد لإيه؟", a:[["الكورة والأهداف",{hand:2,basket:2}],["المضارب والتنس",{tennis:2,tt:2}],["أفلام الأكشن والقتال",{karate:3}],["الاستعراض والحركات الصعبة",{gym:3}]]}
+];
+let qi = 0, score = {};
+function renderQuiz(){
+  const card = $("#quizCard");
+  if (qi < QUIZ.length){
+    const q = QUIZ[qi];
+    card.innerHTML = `<div class="q-prog">${QUIZ.map((_,i)=>`<i class="${i<=qi?"on":""}"></i>`).join("")}</div>
+      <div class="q-step">سؤال ${qi+1} من ${QUIZ.length}</div>
+      <div class="q-title">${q.q}</div>
+      <div class="q-opts">${q.a.map((o,i)=>`<button type="button" data-i="${i}">${o[0]}</button>`).join("")}</div>`;
+    card.querySelectorAll(".q-opts button").forEach(b => b.onclick = () => {
+      const pts = q.a[+b.dataset.i][1];
+      for (const k in pts) score[k] = (score[k]||0) + pts[k];
+      qi++; renderQuiz();
+    });
+  } else {
+    const ranked = SPORTS.map(s => [s, score[s.id]||0]).sort((a,b)=>b[1]-a[1]);
+    const [top, second, third] = ranked;
+    card.innerHTML = `<div class="q-result"><div class="q-step">ترشيحنا</div>
+      <div class="pick">${top[0].name}</div>
+      <p>${top[0].desc}</p>
+      <p class="alt">ممكن كمان يناسبه: ${second[0].name} أو ${third[0].name}.</p>
+      <div class="cta-row"><button class="btn btn-green" type="button" id="qBook">احجز حصة ${top[0].name} المجانية</button>
+      <button class="btn btn-ghost" type="button" id="qAgain">أعيد الاختبار</button></div></div>`;
+    $("#qBook").onclick = () => pickSport(top[0].id);
+    $("#qAgain").onclick = () => { qi = 0; score = {}; renderQuiz(); };
+  }
+}
+renderQuiz();
+
+// join / pay
+const form = $("#joinForm"), payBox = $("#payBox");
+function resetJoin(){ form.hidden = false; payBox.hidden = true; }
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const d = {
+    sport: SPORTS.find(s => s.id === sel.value),
+    name: $("#fName").value.trim(), age: $("#fAge").value.trim(),
+    parent: $("#fParent").value.trim(), phone: $("#fPhone").value.trim().replace(/\s/g,""),
+    kind: form.querySelector('input[name="kind"]:checked').value
+  };
+  const err = $("#fErr");
+  if (!d.name || !d.age || !d.parent) { err.textContent = "من فضلك اكتب اسم الطفل وسنه واسم ولي الأمر."; return; }
+  if (!/^(\+?20|0)?1[0125]\d{8}$/.test(d.phone)) { err.textContent = "رقم الموبايل لازم يكون رقم مصري صحيح، زي 01012345678."; return; }
+  err.textContent = "";
+  const lines = [
+    d.kind === "trial" ? "طلب حجز حصة تجريبية مجانية - أيكون سوهاج" : "طلب اشتراك شهري - أيكون سوهاج",
+    "اللعبة: " + d.sport.name, "اسم الطفل: " + d.name, "السن: " + d.age,
+    "ولي الأمر: " + d.parent, "الموبايل: " + d.phone
+  ];
+  form.hidden = true; payBox.hidden = false;
+  if (d.kind === "trial"){
+    payBox.innerHTML = `<div class="sum"><div><span>الطلب</span><b>حصة تجريبية مجانية</b></div><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div></div>
+      <p>اضغط الزرار وابعت الرسالة الجاهزة على واتساب، وهنرد عليك بالمعاد المناسب.</p>
+      <a class="btn btn-green" target="_blank" rel="noopener" href="${wa(CONFIG.whatsappBooking, lines.join("\n"))}">ابعت طلب الحجز على واتساب</a>
+      <button class="btn btn-ghost" type="button" id="back">تعديل البيانات</button>`;
+  } else {
+    const amt = d.sport.price;
+    const ipLine = CONFIG.instapay
+      ? `<div class="payline"><div><div class="lbl">حوّل على إنستاباي</div><div class="val">${CONFIG.instapay}</div></div><button class="copy" type="button" data-copy="${CONFIG.instapay}">نسخ</button></div>`
+      : `<div class="payline"><div><div class="lbl">بيانات إنستاباي</div><div>هتوصلك على واتساب مع تأكيد المبلغ</div></div></div>`;
+    const wLine = CONFIG.wallet ? `<div class="payline"><div><div class="lbl">أو محفظة</div><div class="val">${CONFIG.wallet}</div></div><button class="copy" type="button" data-copy="${CONFIG.wallet}">نسخ</button></div>` : "";
+    const payBtn = CONFIG.instapayLink ? `<a class="btn btn-green" target="_blank" rel="noopener" href="${CONFIG.instapayLink}">ادفع الآن بإنستاباي</a>` : "";
+    lines.push(amt != null ? "المبلغ: " + amt + " جنيه" : "المبلغ: برجاء التأكيد", "مرفق صورة التحويل");
+    payBox.innerHTML = `<div class="sum"><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div>
+      <div><span>الاشتراك الشهري</span><span class="amount">${amt != null ? amt : "—"}</span></div>${amt == null ? '<div><span></span><span style="color:var(--muted)">السعر هيتأكدلك على واتساب</span></div>' : ""}</div>
+      ${ipLine}${wLine}${payBtn}
+      <a class="btn ${payBtn ? "btn-ghost" : "btn-green"}" target="_blank" rel="noopener" href="${wa(CONFIG.whatsappReceipts, lines.join("\n"))}">ابعت الإيصال على واتساب</a>
+      <p class="note" style="margin:0">ارفق سكرين شوت التحويل مع الرسالة. الاشتراك بيتأكد بعد مراجعة التحويل.</p>
+      <button class="btn btn-ghost" type="button" id="back">تعديل البيانات</button>`;
+  }
+  $("#back").onclick = resetJoin;
+  payBox.querySelectorAll(".copy").forEach(b => b.onclick = () => copy(b.dataset.copy));
+});
+function esc(s){ return s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+function copy(t){
+  const done = () => toast("اتنسخ: " + t);
+  try { navigator.clipboard.writeText(t).then(done, () => toast(t)); } catch(e){ toast(t); }
+}
+let tt;
+function toast(m){ const el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(() => el.hidden = true, 2200); }
+</script>
+</body>
+</html>
