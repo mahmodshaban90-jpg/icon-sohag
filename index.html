@@ -4,308 +4,431 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>أكاديمية أيكون سوهاج</title>
-<meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب تحت إشراف أكاديمي: لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
+<meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب لولادك في مكان واحد: لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
 <meta property="og:title" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج">
 <meta property="og:description" content="8 ألعاب في مكان واحد، بمنهج علمي وإشراف عميد سابق لكلية علوم الرياضة. احجز حصة مجانية.">
-<meta property="og:image" content="assets/logo-on-dark.png">
+<meta property="og:image" content="assets/logo.jpg">
+<meta name="theme-color" content="#00A82D">
 <link rel="icon" href="assets/favicon.png">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="apple-touch-icon" href="assets/logo-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;900&family=Tajawal:wght@400;500;700&family=Bebas+Neue&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap">
 <style>
-/* Layout: dark arena. Black ground, Icon-green "wave" swoosh as the signature, silver metal for numbers and badges. Single dark look by brand choice. */
+/* Light, sunny sports-club look: white + mint ground, Icon green as the lead, sunny yellow for playful highlights. */
 :root{
-  --ink:#0E0F0E; --ink-2:#151816; --ink-3:#1D211F; --line:#2A302C;
-  --green:#00A82D; --green-hi:#1FC94A; --neon:#39FF6A;
-  --silver-1:#E4E7EA; --silver-2:#C9CCCF; --silver-3:#6E7378;
-  --fg:#F3F5F3; --muted:#A3ABA6;
+  --bg:#FFFFFF; --mint:#EEF9F1; --mint-2:#DDF3E3; --line:#E3ECE6;
+  --green:#00A82D; --green-d:#008A25; --green-l:#3DDC6A;
+  --sun:#FFC83D; --sun-l:#FFF4D6; --coral:#FF7A59; --sky:#3BB2F6;
+  --ink:#16201A; --muted:#5D6B63;
   --f-display:"Alexandria","Tajawal",system-ui,sans-serif;
   --f-body:"Tajawal","Segoe UI",Tahoma,system-ui,sans-serif;
-  --f-num:"Bebas Neue","Alexandria",Impact,sans-serif;
-  --r:14px;
-  color-scheme:dark;
+  --r:22px; --shadow:0 18px 40px -18px rgba(0,80,25,.28);
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{background:var(--ink);color:var(--fg);font-family:var(--f-body);font-size:17px;line-height:1.7;direction:rtl;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
-a{color:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:17px;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
-h1,h2,h3{font-family:var(--f-display);line-height:1.25;text-wrap:balance;margin:0}
+a{color:inherit}
+h1,h2,h3{font-family:var(--f-display);line-height:1.25;margin:0;text-wrap:balance}
 p{margin:0}
-.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
-section{padding-block:88px}
-.eyebrow{font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--green-hi);letter-spacing:.02em;display:inline-flex;align-items:center;gap:10px}
-.eyebrow::before{content:"";width:28px;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--neon),var(--green))}
-.sec-head{display:grid;gap:14px;margin-bottom:44px;max-width:720px}
-.sec-head h2{font-size:clamp(28px,4.4vw,44px);font-weight:900}
-.sec-head p{color:var(--muted);font-size:18px}
-.metal{background:linear-gradient(180deg,var(--silver-1) 0%,var(--silver-2) 45%,var(--silver-3) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:700;font-size:16px;padding:14px 26px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .15s ease,background .2s ease,box-shadow .2s ease}
-.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--neon);outline-offset:3px}
-.btn-green{background:var(--green);color:#fff;box-shadow:0 8px 30px -10px rgba(0,168,45,.8)}
-.btn-green:hover{background:var(--green-hi);transform:translateY(-2px)}
-.btn-ghost{background:transparent;color:var(--fg);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--silver-3)}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:90px}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--green-d);background:var(--mint);padding:6px 14px;border-radius:999px}
+.tag i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.head{display:grid;gap:14px;margin-bottom:46px;max-width:760px}
+.head.center{margin-inline:auto;text-align:center;justify-items:center}
+.head h2{font-size:clamp(28px,4.4vw,46px);font-weight:900}
+.head h2 em{font-style:normal;color:var(--green);position:relative;white-space:nowrap}
+.head h2 em::after{content:"";position:absolute;inset:auto 0 2px 0;height:12px;background:var(--sun);opacity:.55;z-index:-1;border-radius:6px}
+.head p{color:var(--muted);font-size:18px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--f-display);font-weight:800;font-size:16px;padding:15px 28px;border-radius:999px;border:0;cursor:pointer;text-decoration:none;transition:transform .2s ease,box-shadow .2s ease,background .2s}
 .btn svg{width:20px;height:20px;flex:none}
+.btn-green{background:var(--green);color:#fff;box-shadow:0 12px 28px -10px rgba(0,168,45,.7)}
+.btn-green:hover{background:var(--green-d);transform:translateY(-3px)}
+.btn-sun{background:var(--sun);color:var(--ink);box-shadow:0 12px 28px -12px rgba(230,160,0,.8)}
+.btn-sun:hover{transform:translateY(-3px)}
+.btn-line{background:#fff;color:var(--ink);border:2px solid var(--line)}
+.btn-line:hover{border-color:var(--green);color:var(--green-d)}
+:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
 
-/* header */
-.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,15,14,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+/* top bar + header */
+.topbar{background:var(--green);color:#fff;font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;min-height:38px;flex-wrap:wrap}
+.topbar a{text-decoration:none;font-weight:700;direction:ltr}
+.topbar .msg{font-family:var(--f-display);font-weight:500}
+header.nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);transition:box-shadow .3s}
+header.nav.scrolled{box-shadow:0 6px 24px -12px rgba(0,60,20,.25)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:76px}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none}
-.brand img{height:44px;width:auto}
-.brand span{font-family:var(--f-display);font-weight:700;font-size:15px;line-height:1.2}
-.brand small{display:block;color:var(--muted);font-weight:500;font-size:12px}
-.nav{display:flex;gap:22px;font-family:var(--f-display);font-size:14px;font-weight:500}
-.nav a{text-decoration:none;color:var(--muted)}
-.nav a:hover{color:var(--fg)}
-.top .btn{padding:10px 18px;font-size:14px}
-@media (max-width:900px){.nav{display:none}}
+.brand img{height:58px;width:58px;object-fit:contain}
+.brand b{font-family:var(--f-display);font-size:16px;line-height:1.2;display:block}
+.brand small{color:var(--muted);font-size:13px}
+.menu{display:flex;gap:24px;font-family:var(--f-display);font-weight:500;font-size:15px}
+.menu a{text-decoration:none;position:relative;padding:4px 0}
+.menu a::after{content:"";position:absolute;right:0;bottom:-2px;height:3px;width:0;background:var(--green);border-radius:3px;transition:width .25s}
+.menu a:hover::after{width:100%}
+header.nav .btn{padding:11px 20px;font-size:14px}
+@media (max-width:960px){.menu{display:none}}
+@media (max-width:420px){header.nav .btn{display:none}}
 
-/* hero */
-.hero{position:relative;padding-block:64px 40px;overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center}
-.hero-copy{display:grid;gap:22px;min-width:0}
-.badge{display:inline-flex;align-items:center;gap:8px;width:max-content;max-width:100%;padding:7px 14px 7px 16px;border-radius:999px;font-size:13px;font-family:var(--f-display);font-weight:500;color:var(--ink);background:linear-gradient(180deg,var(--silver-1),var(--silver-2) 60%,#9EA3A8)}
-.badge b{background:var(--ink);color:var(--neon);border-radius:999px;padding:2px 10px;font-weight:700}
-.hero h1{font-size:clamp(36px,6.4vw,74px);font-weight:900;letter-spacing:-.01em}
-.hero h1 .g{color:var(--green-hi)}
-.hero .lead{font-size:clamp(17px,2vw,20px);color:var(--muted);max-width:560px}
-.hero .lead strong{color:var(--fg)}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px}
-.hero-art{position:relative;display:grid;place-items:center;min-width:0}
-.hero-art .ring{position:absolute;width:min(420px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 45%,rgba(57,255,106,.22),rgba(0,168,45,.08) 45%,transparent 70%)}
-.hero-art img{position:relative;width:min(340px,80%);filter:drop-shadow(0 30px 50px rgba(0,0,0,.6));animation:float 6s ease-in-out infinite}
-@keyframes float{50%{transform:translateY(-12px) rotate(-2deg)}}
-.swoosh{position:absolute;bottom:-40px;right:-10%;width:120%;height:220px;pointer-events:none;opacity:.9}
-.sports-strip{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
-.sports-strip span{font-size:13px;font-family:var(--f-display);padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--silver-2);background:var(--ink-2)}
-@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.hero-art{order:-1}.hero-art img{width:min(170px,48%)}}
+/* hero slider */
+.hero{position:relative;padding:22px 0 0;overflow-x:clip}
+.slider{position:relative;height:clamp(460px,72vh,640px);border-radius:32px;overflow:hidden;margin-inline:max(12px,env(safe-area-inset-left,0px));background:var(--mint)}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease}
+.slide.on{opacity:1}
+.slide img{width:100%;height:100%;object-fit:cover;transform:scale(1.12);transition:transform 7s ease-out}
+.slide.on img{transform:scale(1)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(0,40,12,.66) 0%,rgba(0,40,12,.25) 55%,rgba(0,0,0,0) 80%)}
+.hero-card{position:absolute;z-index:3;inset:auto 0 0 0;padding:0 max(28px,5vw) 64px}
+.hero-card .in{max-width:620px;color:#fff;display:grid;gap:18px}
+.hero-card .badge{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--green-d);font-family:var(--f-display);font-weight:800;font-size:14px;border-radius:999px;padding:7px 16px;width:max-content;max-width:100%;box-shadow:var(--shadow)}
+.hero-card h1{font-size:clamp(30px,4.4vw,56px);font-weight:900;text-shadow:0 4px 30px rgba(0,0,0,.25)}
+.hero-card h1 span{color:var(--sun)}
+.hero-card p{font-size:clamp(16px,2vw,20px);opacity:.95;max-width:520px}
+.hero-card .cta{display:flex;gap:12px;flex-wrap:wrap}
+.slide-txt{display:block;animation:rise .8s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.dots{position:absolute;z-index:4;bottom:26px;left:max(28px,5vw);display:flex;gap:8px}
+.dots button{width:12px;height:12px;border-radius:999px;border:0;background:rgba(255,255,255,.55);cursor:pointer;padding:0;transition:width .3s,background .3s}
+.dots button.on{width:36px;background:var(--sun)}
+.floaty{position:absolute;z-index:3;width:64px;height:64px;border-radius:20px;background:#fff;display:grid;place-items:center;box-shadow:var(--shadow);color:var(--green)}
+.floaty svg{width:36px;height:36px}
+.f1{top:34px;left:6%;animation:bob 4s ease-in-out infinite}
+.f2{top:150px;left:16%;animation:bob 5s ease-in-out .6s infinite;background:var(--sun);color:var(--ink)}
+.f3{top:60px;left:28%;animation:bob 4.6s ease-in-out 1.2s infinite}
+@keyframes bob{50%{transform:translateY(-14px) rotate(-6deg)}}
+@media (max-width:760px){.floaty{display:none}.hero-card{padding-bottom:64px}.slide::after{background:linear-gradient(0deg,rgba(0,40,12,.8) 10%,rgba(0,40,12,.25) 70%,rgba(0,0,0,.05))}}
 
-/* proof band */
-.proof{border-block:1px solid var(--line);background:var(--ink-2);padding-block:28px}
-.proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.proof div{display:grid;gap:2px}
-.proof .n{font-family:var(--f-num);font-size:48px;line-height:1}
-.proof .t{color:var(--muted);font-size:15px}
-@media (max-width:760px){.proof .wrap{grid-template-columns:repeat(2,1fr)}}
+/* marquee */
+.marquee{overflow:hidden;background:var(--sun);transform:rotate(-1.2deg);margin:40px -10px 0;padding:14px 0;box-shadow:0 10px 30px -18px rgba(200,140,0,.9)}
+.track{display:flex;gap:48px;width:max-content;animation:scroll 28s linear infinite}
+.track span{font-family:var(--f-display);font-weight:900;font-size:22px;display:inline-flex;align-items:center;gap:14px;white-space:nowrap}
+.track span::after{content:"";width:12px;height:12px;border-radius:50%;background:var(--green)}
+@keyframes scroll{to{transform:translateX(50%)}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.stat{background:var(--mint);border-radius:var(--r);padding:26px 22px;display:grid;gap:4px;text-align:center;transition:transform .3s}
+.stat:hover{transform:translateY(-6px)}
+.stat .n{font-family:var(--f-display);font-weight:900;font-size:46px;color:var(--green);line-height:1.1}
+.stat .t{color:var(--muted);font-size:15px}
+.stat:nth-child(2){background:var(--sun-l)}
+.stat:nth-child(2) .n{color:#C98A00}
+.stat:nth-child(4){background:#EAF6FE}
+.stat:nth-child(4) .n{color:#1789CC}
+@media (max-width:820px){.stats{grid-template-columns:repeat(2,1fr)}}
 
 /* sports */
-.sports-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.sport{position:relative;display:grid;grid-template-rows:auto auto 1fr auto;gap:12px;padding:22px;border-radius:var(--r);background:linear-gradient(180deg,var(--ink-3),var(--ink-2));border:1px solid var(--line);overflow:hidden;min-width:0;transition:border-color .2s,transform .2s}
-.sport:hover{border-color:rgba(31,201,74,.6);transform:translateY(-3px)}
-.sport .ic{width:58px;height:58px;border-radius:16px;display:grid;place-items:center;background:rgba(0,168,45,.12);color:var(--neon)}
-.sport .ic svg{width:34px;height:34px}
-.sport h3{font-size:21px;font-weight:700}
-.sport p{color:var(--muted);font-size:15px;line-height:1.65}
-.sport .meta{display:grid;gap:4px;font-size:13px;color:var(--silver-2);border-top:1px dashed var(--line);padding-top:12px}
-.sport .meta b{color:var(--fg);font-weight:500}
-.sport .go{margin-top:4px;justify-self:start;background:none;border:0;color:var(--green-hi);font-family:var(--f-display);font-weight:700;font-size:14px;cursor:pointer;padding:6px 0;display:inline-flex;gap:6px;align-items:center}
-.sport .go:hover{color:var(--neon)}
-.sport .num{position:absolute;top:14px;left:18px;font-family:var(--f-num);font-size:30px;color:var(--line)}
-@media (max-width:1000px){.sports-grid{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.sports-grid{grid-template-columns:1fr}}
+.sports{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{position:relative;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 0 var(--line),0 10px 30px -20px rgba(0,60,20,.35);display:grid;grid-template-rows:auto 1fr;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;min-width:0}
+.card:hover{transform:translateY(-8px);box-shadow:0 2px 0 var(--line),var(--shadow)}
+.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--mint)}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.card:hover .ph img{transform:scale(1.1)}
+.card .ic{position:absolute;bottom:-26px;right:18px;width:58px;height:58px;border-radius:18px;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 10px 20px -8px rgba(0,120,30,.7);transition:transform .4s}
+.card:hover .ic{transform:rotate(-10deg) scale(1.08)}
+.card .ic svg{width:32px;height:32px}
+.card:nth-child(4n+2) .ic{background:var(--sun);color:var(--ink)}
+.card:nth-child(4n+3) .ic{background:var(--sky)}
+.card:nth-child(4n+4) .ic{background:var(--coral)}
+.card .body{padding:38px 20px 20px;display:grid;gap:10px;align-content:start}
+.card h3{font-size:22px;font-weight:800}
+.card p{color:var(--muted);font-size:15px;line-height:1.7}
+.card .meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px}
+.card .meta span{background:var(--mint);padding:3px 10px;border-radius:999px}
+.card .go{justify-self:start;margin-top:6px;background:none;border:0;padding:0;cursor:pointer;font-family:var(--f-display);font-weight:800;font-size:15px;color:var(--green-d);display:inline-flex;gap:8px;align-items:center}
+.card .go b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--mint);transition:transform .25s,background .25s}
+.card:hover .go b{transform:translateX(-5px);background:var(--sun)}
+@media (max-width:1060px){.sports{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.sports{grid-template-columns:1fr}}
+
+/* why */
+.why{background:var(--mint);position:relative}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.why-img{position:relative}
+.why-img .main{border-radius:28px;overflow:hidden;aspect-ratio:5/4;box-shadow:var(--shadow)}
+.why-img .main img{width:100%;height:100%;object-fit:cover}
+.why-img .chip{position:absolute;background:#fff;border-radius:18px;padding:14px 18px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;font-family:var(--f-display);font-weight:700;font-size:15px}
+.why-img .chip b{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--sun);font-size:20px}
+.why-img .c1{bottom:-22px;right:-10px;animation:bob 5s ease-in-out infinite}
+.why-img .c2{top:22px;left:-14px;animation:bob 5.5s ease-in-out 1s infinite}
+.feat{display:grid;gap:16px}
+.feat div{display:grid;grid-template-columns:56px 1fr;gap:16px;align-items:start;background:#fff;border-radius:18px;padding:18px;transition:transform .3s}
+.feat div:hover{transform:translateX(-6px)}
+.feat .i{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:var(--mint-2);color:var(--green-d)}
+.feat .i svg{width:28px;height:28px}
+.feat h3{font-size:18px;font-weight:800}
+.feat p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr}.why-img .c2{left:6px}.why-img .c1{right:6px}}
 
 /* quiz */
-.quiz-sec{background:radial-gradient(1200px 400px at 85% 0%,rgba(0,168,45,.14),transparent 60%),var(--ink)}
-.quiz{display:grid;grid-template-columns:.9fr 1.1fr;gap:40px;align-items:start}
-.quiz-card{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:28px;min-width:0}
-.q-prog{display:flex;gap:6px;margin-bottom:22px}
-.q-prog i{flex:1;height:5px;border-radius:5px;background:var(--line)}
+.quiz{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}
+.quiz-card{background:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow);border:2px solid var(--mint-2);min-width:0;position:relative;overflow:hidden}
+.quiz-card::before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--sun-l);top:-70px;left:-60px}
+.quiz-card > *{position:relative}
+.q-prog{display:flex;gap:6px;margin-bottom:18px}
+.q-prog i{flex:1;height:7px;border-radius:7px;background:var(--mint-2);transition:background .3s}
 .q-prog i.on{background:var(--green)}
-.q-title{font-family:var(--f-display);font-weight:700;font-size:22px;margin-bottom:18px}
+.q-step{font-size:14px;color:var(--muted);font-family:var(--f-display)}
+.q-title{font-family:var(--f-display);font-weight:800;font-size:23px;margin:4px 0 18px}
 .q-opts{display:grid;gap:10px}
-.q-opts button{text-align:right;font-family:var(--f-body);font-size:17px;color:var(--fg);background:var(--ink-3);border:1.5px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s}
-.q-opts button:hover{border-color:var(--green);background:rgba(0,168,45,.08)}
-.q-result{display:grid;gap:14px}
-.q-result .pick{font-family:var(--f-display);font-weight:900;font-size:34px;color:var(--neon)}
-.q-result .alt{color:var(--muted)}
-.q-step{font-size:13px;color:var(--muted);margin-bottom:6px;font-family:var(--f-display)}
-@media (max-width:860px){.quiz{grid-template-columns:1fr}}
+.q-opts button{text-align:right;font:inherit;font-size:17px;color:var(--ink);background:var(--mint);border:2px solid transparent;border-radius:16px;padding:14px 18px;cursor:pointer;transition:transform .2s,border-color .2s,background .2s;animation:rise .45s ease both}
+.q-opts button:nth-child(2){animation-delay:.07s}.q-opts button:nth-child(3){animation-delay:.14s}.q-opts button:nth-child(4){animation-delay:.21s}
+.q-opts button:hover{border-color:var(--green);background:#fff;transform:translateX(-4px)}
+.q-res{display:grid;gap:14px;animation:rise .6s ease both}
+.q-res .pick{font-family:var(--f-display);font-weight:900;font-size:40px;color:var(--green)}
+.q-res .pick-img{border-radius:18px;overflow:hidden;aspect-ratio:16/8}
+.q-res .pick-img img{width:100%;height:100%;object-fit:cover}
+.q-res .alt{color:var(--muted)}
+.q-res .row{display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:900px){.quiz{grid-template-columns:1fr}}
 
-/* directors */
-.staff{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-.person{display:grid;grid-template-columns:200px 1fr;gap:24px;align-items:center;background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:18px;min-width:0}
-.person .ph{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;background:var(--ink-3)}
-.person .ph img{width:100%;height:100%;object-fit:cover}
-.person .ph::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--neon),var(--green))}
-.person .role{font-family:var(--f-display);font-size:13px;font-weight:700;color:var(--ink);background:linear-gradient(180deg,var(--silver-1),var(--silver-2));border-radius:999px;padding:3px 12px;width:max-content}
-.person h3{font-size:24px;font-weight:900;margin-top:10px}
-.person p{color:var(--muted);margin-top:8px;font-size:16px}
-@media (max-width:980px){.staff{grid-template-columns:1fr}}
-@media (max-width:520px){.person{grid-template-columns:1fr}.person .ph{max-width:260px}}
-
-/* method */
-.method{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.method div{padding:24px;border-radius:var(--r);border:1px solid var(--line);background:var(--ink-2);display:grid;gap:8px;min-width:0}
-.method h3{font-size:19px;font-weight:700}
-.method p{color:var(--muted);font-size:15px}
-.method .k{font-family:var(--f-num);font-size:22px;color:var(--green-hi);letter-spacing:.04em}
-@media (max-width:860px){.method{grid-template-columns:1fr}}
+/* staff */
+.staff{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.person{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 2px 0 var(--line),0 16px 40px -26px rgba(0,60,20,.4);display:grid;grid-template-columns:230px 1fr;min-width:0;transition:transform .3s}
+.person:hover{transform:translateY(-6px)}
+.person .ph{background:linear-gradient(160deg,var(--mint-2),var(--sun-l));position:relative}
+.person .ph img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.person .tx{padding:28px;display:grid;gap:10px;align-content:center}
+.person .role{display:inline-block;width:max-content;background:var(--green);color:#fff;font-family:var(--f-display);font-weight:700;font-size:13px;border-radius:999px;padding:4px 14px}
+.person:nth-child(2) .role{background:var(--sun);color:var(--ink)}
+.person h3{font-size:26px;font-weight:900}
+.person p{color:var(--muted);font-size:16px}
+@media (max-width:1000px){.staff{grid-template-columns:1fr}}
+@media (max-width:560px){.person{grid-template-columns:1fr}.person .ph img{max-height:360px;object-position:top}}
 
 /* schedule */
-.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r)}
-table{width:100%;border-collapse:collapse;min-width:620px;font-size:15px}
-th,td{padding:14px 16px;text-align:right;border-bottom:1px solid var(--line)}
-th{font-family:var(--f-display);font-weight:700;background:var(--ink-3);color:var(--silver-2);font-size:14px}
+.tbl{overflow-x:auto;border-radius:22px;border:2px solid var(--mint-2);background:#fff}
+table{width:100%;border-collapse:collapse;min-width:640px}
+th,td{padding:15px 18px;text-align:right;border-bottom:1px solid var(--line);font-size:15px}
+th{background:var(--mint);font-family:var(--f-display);font-weight:800;color:var(--green-d)}
 tr:last-child td{border-bottom:0}
-td.soon{color:var(--muted)}
-.note{color:var(--muted);font-size:14px;margin-top:12px}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:#FAFEFB}
+td.ask{color:var(--muted)}
+td .dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-left:8px;background:var(--green)}
+.note{color:var(--muted);font-size:15px;margin-top:14px}
 
-/* join / payment */
-.join{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
-.panel{background:var(--ink-2);border:1px solid var(--line);border-radius:20px;padding:28px;min-width:0}
-.steps{display:grid;gap:16px;counter-reset:s;margin:0;padding:0;list-style:none}
-.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}
-.steps li::before{counter-increment:s;content:counter(s);font-family:var(--f-num);font-size:26px;line-height:44px;text-align:center;border-radius:12px;background:var(--ink-3);border:1px solid var(--line);color:var(--neon)}
+/* join */
+.join-sec{background:linear-gradient(180deg,#fff 0%,var(--mint) 100%)}
+.join{display:grid;grid-template-columns:1fr 1.05fr;gap:30px;align-items:start}
+.steps{display:grid;gap:14px;list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:54px 1fr;gap:16px;align-items:center;background:#fff;border-radius:18px;padding:16px;box-shadow:0 2px 0 var(--line)}
+.steps li::before{counter-increment:s;content:counter(s);display:grid;place-items:center;height:54px;border-radius:16px;background:var(--green);color:#fff;font-family:var(--f-display);font-weight:900;font-size:24px}
+.steps li:nth-child(2)::before{background:var(--sun);color:var(--ink)}
+.steps li:nth-child(3)::before{background:var(--sky)}
+.steps li:nth-child(4)::before{background:var(--coral)}
 .steps b{font-family:var(--f-display);display:block;font-size:17px}
 .steps span{color:var(--muted);font-size:15px}
+.panel{background:#fff;border-radius:28px;padding:30px;box-shadow:var(--shadow);min-width:0}
+.panel h3{font-size:22px;font-weight:900;margin-bottom:16px}
 form{display:grid;gap:14px}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-label{display:grid;gap:6px;font-family:var(--f-display);font-size:14px;font-weight:500;color:var(--silver-2)}
-input,select{font:inherit;font-size:16px;color:var(--fg);background:var(--ink);border:1.5px solid var(--line);border-radius:12px;padding:12px 14px;width:100%}
-input:focus,select:focus{border-color:var(--green);outline:none}
-.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:8px}
+label{display:grid;gap:6px;font-family:var(--f-display);font-size:14px;font-weight:700}
+input,select{font:inherit;font-size:16px;color:var(--ink);background:var(--mint);border:2px solid transparent;border-radius:14px;padding:12px 14px;width:100%;transition:border-color .2s,background .2s}
+input:focus,select:focus{outline:none;border-color:var(--green);background:#fff}
+.seg{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .seg input{position:absolute;top:0;right:0;width:1px;height:1px;opacity:0;pointer-events:none}
-.seg label{cursor:pointer;text-align:center;padding:12px;border:1.5px solid var(--line);border-radius:12px;color:var(--fg);font-size:15px;display:block}
-.seg input:checked+label{border-color:var(--green);background:rgba(0,168,45,.12)}
-.seg input:focus-visible+label{outline:3px solid var(--neon);outline-offset:2px}
-.err{color:#FF8A8A;font-size:14px;min-height:1em}
-.pay{display:grid;gap:16px}
-.pay .sum{display:grid;gap:6px;padding:16px;border-radius:14px;background:var(--ink);border:1px dashed var(--line);font-size:15px}
-.pay .sum div{display:flex;justify-content:space-between;gap:12px}
-.pay .sum b{font-weight:700}
-.pay .amount{font-family:var(--f-num);font-size:40px;color:var(--neon);line-height:1}
-.payline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:14px;background:var(--ink-3)}
+.seg label{cursor:pointer;text-align:center;padding:13px;border:2px solid var(--line);border-radius:14px;font-size:15px;display:block;transition:all .2s}
+.seg input:checked+label{border-color:var(--green);background:var(--mint);color:var(--green-d)}
+.seg input:focus-visible+label{outline:3px solid var(--sky);outline-offset:2px}
+.err{color:#D83A1E;font-size:14px;min-height:1em}
+.pay{display:grid;gap:14px;animation:rise .5s ease both}
+.sum{background:var(--mint);border-radius:18px;padding:16px 18px;display:grid;gap:6px;font-size:15px}
+.sum div{display:flex;justify-content:space-between;gap:12px}
+.amount{font-family:var(--f-display);font-weight:900;font-size:30px;color:var(--green)}
+.payline{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:14px 16px;border-radius:16px;border:2px dashed var(--mint-2)}
 .payline .lbl{font-size:13px;color:var(--muted)}
-.payline .val{font-family:var(--f-num);font-size:26px;letter-spacing:.04em;direction:ltr}
-.copy{background:none;border:1px solid var(--line);color:var(--fg);border-radius:999px;padding:6px 14px;cursor:pointer;font-family:var(--f-display);font-size:13px}
-.copy:hover{border-color:var(--green)}
+.payline .val{font-family:var(--f-display);font-weight:800;font-size:20px;direction:ltr}
+.copy{background:var(--sun);border:0;border-radius:999px;padding:7px 16px;cursor:pointer;font-family:var(--f-display);font-weight:700;font-size:13px}
 @media (max-width:900px){.join{grid-template-columns:1fr}}
 @media (max-width:460px){.row2{grid-template-columns:1fr}}
 
-/* contact */
-.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.contact a,.contact div{display:grid;gap:4px;padding:22px;border-radius:var(--r);border:1px solid var(--line);background:var(--ink-2);text-decoration:none;min-width:0}
-.contact a:hover{border-color:var(--green)}
-.contact .lbl{color:var(--muted);font-size:14px}
-.contact .val{font-family:var(--f-display);font-weight:700;font-size:19px;overflow-wrap:anywhere}
-.contact .val.ltr{direction:ltr;text-align:right;font-family:var(--f-num);font-size:28px;letter-spacing:.03em;font-weight:400}
-@media (max-width:860px){.contact{grid-template-columns:1fr}}
+/* faq */
+.faq{display:grid;gap:12px;max-width:860px;margin:0 auto}
+.faq details{background:#fff;border:2px solid var(--mint-2);border-radius:18px;padding:0 20px;transition:border-color .2s}
+.faq details[open]{border-color:var(--green)}
+.faq summary{cursor:pointer;list-style:none;font-family:var(--f-display);font-weight:800;font-size:17px;padding:18px 0;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--mint);color:var(--green-d);font-size:22px;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg);background:var(--sun);color:var(--ink)}
+.faq details p{color:var(--muted);padding-bottom:18px}
 
-footer{border-top:1px solid var(--line);padding-block:36px calc(36px + env(safe-area-inset-bottom,0px));color:var(--muted);font-size:14px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-footer img{height:56px;width:auto}
+/* cta band */
+.band{background:var(--green);color:#fff;border-radius:32px;padding:46px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;position:relative;overflow:hidden}
+.band::before,.band::after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.1)}
+.band::before{width:260px;height:260px;top:-120px;left:-60px}
+.band::after{width:160px;height:160px;bottom:-80px;left:30%;background:rgba(255,200,61,.35)}
+.band h2{font-size:clamp(26px,3.6vw,40px);font-weight:900;position:relative}
+.band p{opacity:.92;margin-top:8px;position:relative}
+.band .btn{position:relative}
+@media (max-width:760px){.band{grid-template-columns:1fr;padding:32px 24px}}
 
-/* floating whatsapp */
-.fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(37,211,102,.7);text-decoration:none}
-.fab svg{width:32px;height:32px;fill:#fff}
-.fab::after{content:"";position:absolute;inset:-6px;border-radius:50%;border:2px solid #25D366;opacity:.5;animation:pulse 2.2s ease-out infinite}
-@keyframes pulse{to{inset:-16px;opacity:0}}
-.toast{position:fixed;bottom:calc(92px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--fg);color:var(--ink);padding:10px 18px;border-radius:999px;font-family:var(--f-display);font-size:14px;z-index:80}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+/* contact + footer */
+.contact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact a{display:grid;grid-template-columns:56px 1fr;gap:14px;align-items:center;padding:20px;border-radius:20px;background:var(--mint);text-decoration:none;transition:transform .25s,background .25s;min-width:0}
+.contact a:hover{transform:translateY(-4px);background:var(--mint-2)}
+.contact .i{width:56px;height:56px;border-radius:16px;display:grid;place-items:center;background:#fff;color:var(--green)}
+.contact .i svg{width:28px;height:28px}
+.contact .lbl{display:block;color:var(--muted);font-size:14px}
+.contact .val{display:block;font-family:var(--f-display);font-weight:800;font-size:18px;overflow-wrap:anywhere}
+.contact .ltr{direction:ltr;text-align:right}
+@media (max-width:900px){.contact{grid-template-columns:1fr}}
+footer{background:var(--ink);color:#C9D3CD;padding-block:44px calc(44px + env(safe-area-inset-bottom,0px));margin-top:90px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .fb{display:flex;align-items:center;gap:14px}
+footer .fb img{width:64px;height:64px;border-radius:16px;background:#fff;object-fit:contain}
+footer small{display:block;color:#8FA197;font-size:13px}
+footer .credit{font-size:12px;color:#8FA197}
+footer .credit a{color:#C9D3CD}
+
+/* floating whatsapp + to-top */
+.fab{position:fixed;left:calc(18px + env(safe-area-inset-left,0px));bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:70;width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 12px 30px -8px rgba(37,211,102,.8);text-decoration:none}
+.fab svg{width:34px;height:34px;fill:#fff}
+.fab::after{content:"";position:absolute;inset:0;border-radius:50%;border:3px solid #25D366;animation:ping 2s ease-out infinite}
+@keyframes ping{to{inset:-16px;opacity:0}}
+.fab .bubble{position:absolute;left:74px;white-space:nowrap;background:#fff;color:var(--ink);font-family:var(--f-display);font-weight:700;font-size:14px;padding:8px 14px;border-radius:14px;box-shadow:var(--shadow);animation:rise .6s 2s both}
+@media (max-width:520px){.fab .bubble{display:none}}
+.toast{position:fixed;bottom:calc(96px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 18px;border-radius:999px;font-family:var(--f-display);font-size:14px;z-index:80}
+[hidden]{display:none!important}
+
+/* scroll reveal (only when JS runs) */
+.js .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add("js")</script>
 
-<header class="top">
+<div class="topbar">
   <div class="wrap">
-    <a class="brand" href="#home" aria-label="أكاديمية أيكون - الرئيسية">
-      <img src="assets/mark.png" alt="" width="40" height="44">
-      <span>أكاديمية أيكون<small>فرع سوهاج</small></span>
+    <span class="msg">🎉 أول حصة لابنك مجاناً، احجز مكانه دلوقتي</span>
+    <a class="js-call" href="#" id="topPhone"></a>
+  </div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a class="brand" href="#home">
+      <img src="assets/logo.jpg" alt="شعار أيكون للألعاب الرياضية" width="58" height="58">
+      <span><b>أكاديمية أيكون</b><small>للألعاب الرياضية · فرع سوهاج</small></span>
     </a>
-    <nav class="nav" aria-label="أقسام الموقع">
+    <nav class="menu" aria-label="أقسام الموقع">
       <a href="#sports">ألعابنا</a>
       <a href="#quiz">اختبار اللعبة</a>
       <a href="#staff">الإدارة الفنية</a>
       <a href="#schedule">المواعيد</a>
       <a href="#join">الاشتراك</a>
-      <a href="#contact">تواصل</a>
+      <a href="#faq">أسئلة</a>
     </nav>
     <a class="btn btn-green js-trial" href="#" target="_blank" rel="noopener">احجز حصة مجانية</a>
   </div>
 </header>
 
 <main id="home">
-  <section class="hero">
-    <svg class="swoosh" viewBox="0 0 1200 220" preserveAspectRatio="none" aria-hidden="true">
-      <defs><linearGradient id="sw" x1="0" x2="1"><stop offset="0" stop-color="#39FF6A" stop-opacity="0"/><stop offset=".45" stop-color="#00A82D" stop-opacity=".55"/><stop offset="1" stop-color="#39FF6A" stop-opacity=".1"/></linearGradient></defs>
-      <path d="M0 170 C 300 60, 520 230, 800 120 S 1120 40, 1200 90 L1200 110 C 1110 70, 960 150, 800 150 S 300 110, 0 200 Z" fill="url(#sw)"/>
-    </svg>
-    <div class="wrap">
-      <div class="hero-copy">
-        <span class="badge"><b>توكيل رسمي</b> من أيكون للألعاب الرياضية</span>
-        <h1>أيكون وصلت سوهاج.<br><span class="g">ابنك يستاهل يبقى أيكون.</span></h1>
-        <p class="lead">8 ألعاب في مكان واحد، بمنهج تدريب علمي وتحت إشراف <strong>أ.د. أحمد عبدالله</strong>، عميد كلية علوم الرياضة سابقاً. أول حصة لابنك أو بنتك عندنا مجاناً.</p>
-        <div class="cta-row">
-          <a class="btn btn-green js-trial" href="#" target="_blank" rel="noopener">
-            <svg viewBox="0 0 32 32" aria-hidden="true"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.2-.3-.3-.6-.5Z"/></svg>
-            احجز حصة مجانية على واتساب
-          </a>
-          <a class="btn btn-ghost" href="#quiz">ابنك ينفع في أنهي لعبة؟</a>
-        </div>
-        <div class="sports-strip" aria-label="الألعاب المتاحة">
-          <span>لياقة بدنية</span><span>جمباز</span><span>تنس أرضي</span><span>تنس طاولة</span><span>كرة طائرة</span><span>كرة يد</span><span>كرة سلة</span><span>كاراتيه</span>
+  <section class="hero" style="padding-bottom:0">
+    <div class="slider" id="slider">
+      <div class="slide on"><img src="https://unsplash.com/photos/y_sf8j3K2ZY/download?w=1600" alt="أطفال بيلعبوا في الملعب"></div>
+      <div class="slide"><img src="https://unsplash.com/photos/jbsr6R7CRik/download?w=1600" alt="أطفال بيلعبوا كرة سلة" loading="lazy"></div>
+      <div class="slide"><img src="https://unsplash.com/photos/ryOMte-FerE/download?w=1600" alt="أطفال في تمرين كاراتيه" loading="lazy"></div>
+      <div class="slide"><img src="https://unsplash.com/photos/igvyIrLGXKA/download?w=1600" alt="بنات في تمرين جمباز" loading="lazy"></div>
+
+      <div class="floaty f1" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7v34M12 12c6 6 6 18 0 24M36 12c-6 6-6 18 0 24"/></svg></div>
+      <div class="floaty f2" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M10 13c8 6 8 16 0 22M38 13c-8 6-8 16 0 22"/></svg></div>
+      <div class="floaty f3" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M24 7c-2 10 2 16 12 21M7.5 27c8-2 13-8 13-18M14 38c6-7 14-9 24-6"/></svg></div>
+
+      <div class="hero-card">
+        <div class="in" id="heroText">
+          <span class="badge">⭐ توكيل رسمي من أيكون للألعاب الرياضية</span>
+          <h1 class="slide-txt" id="heroH">أيكون وصلت سوهاج!<br><span>ابنك يستاهل يبقى أيكون</span></h1>
+          <p class="slide-txt" id="heroP">8 ألعاب في مكان واحد، بمنهج علمي وتحت إشراف أ.د. أحمد عبدالله، عميد كلية علوم الرياضة سابقاً.</p>
+          <div class="cta">
+            <a class="btn btn-sun js-trial" href="#" target="_blank" rel="noopener">احجز حصة مجانية</a>
+            <a class="btn btn-line" href="#sports">شوف الألعاب</a>
+          </div>
         </div>
       </div>
-      <div class="hero-art">
-        <div class="ring"></div>
-        <img src="assets/logo-on-dark-sm.png" alt="شعار أيكون للألعاب الرياضية" width="340" height="456">
-      </div>
+      <div class="dots" id="dots" aria-label="تغيير الصورة"></div>
     </div>
+    <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
   </section>
 
-  <div class="proof">
-    <div class="wrap">
-      <div><span class="n metal">8</span><span class="t">ألعاب في مكان واحد</span></div>
-      <div><span class="n metal">1</span><span class="t">مشوار لكل إخواتك</span></div>
-      <div><span class="n metal">100%</span><span class="t">منهج علمي من كلية علوم الرياضة</span></div>
-      <div><span class="n metal">0</span><span class="t">جنيه للحصة التجريبية الأولى</span></div>
+  <section style="padding-top:70px;padding-bottom:30px">
+    <div class="wrap stats">
+      <div class="stat rv"><span class="n" data-count="8">8</span><span class="t">ألعاب في مكان واحد</span></div>
+      <div class="stat rv d1"><span class="n">أ.د.</span><span class="t">إشراف فني من كلية علوم الرياضة</span></div>
+      <div class="stat rv d2"><span class="n" data-count="100" data-suffix="%">100%</span><span class="t">برامج تدريب حسب سن ومستوى الطفل</span></div>
+      <div class="stat rv d3"><span class="n">مجاناً</span><span class="t">أول حصة تجريبية لابنك</span></div>
     </div>
-  </div>
+  </section>
 
   <section id="sports">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">ألعابنا</span>
-        <h2>اختار اللعبة اللي تناسب ابنك</h2>
-        <p>كل لعبة ليها مدرب متخصص وبرنامج متدرّج حسب السن والمستوى. اضغط «احجز» وهنكمّل معاك.</p>
+      <div class="head center rv">
+        <span class="tag"><i></i>ألعابنا</span>
+        <h2>اختار <em>اللعبة</em> اللي تناسب ابنك</h2>
+        <p>كل لعبة ليها مدرب متخصص وبرنامج متدرّج. دوس على اللعبة واحجز أول حصة مجاناً.</p>
       </div>
-      <div class="sports-grid" id="sportsGrid"></div>
+      <div class="sports" id="sportsGrid"></div>
     </div>
   </section>
 
-  <section id="quiz" class="quiz-sec">
+  <section class="why">
+    <div class="wrap why-grid">
+      <div class="why-img rv">
+        <div class="main"><img src="https://unsplash.com/photos/_rsDatSwl8A/download?w=1200" alt="أطفال بيلعبوا مع بعض" loading="lazy"></div>
+        <div class="chip c1"><b>🏅</b>منهج علمي معتمد</div>
+        <div class="chip c2"><b>👨‍👩‍👧</b>كل إخواتك في مشوار واحد</div>
+      </div>
+      <div>
+        <div class="head rv" style="margin-bottom:26px">
+          <span class="tag"><i></i>ليه أيكون؟</span>
+          <h2>تدريب بمنهج علمي، <em>مش بالفهلوة</em></h2>
+        </div>
+        <div class="feat">
+          <div class="rv"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span><div><h3>تقييم لياقة في أول حصة</h3><p>سرعة ومرونة وتوازن، عشان نعرف ابنك بيبدأ منين.</p></div></div>
+          <div class="rv d1"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><div><h3>تقرير مستوى كل شهر</h3><p>بيوصلك تطور ابنك أول بأول، وتشوف الفرق بعينك.</p></div></div>
+          <div class="rv d2"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><h3>أمان في كل تمرين</h3><p>أحمال تدريب مناسبة للسن تحمي الطفل من الإصابة.</p></div></div>
+          <div class="rv d3"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span><div><h3>بطولات وشهادات</h3><p>مشاركة في بطولات، وشهادة تقدير لكل بطل.</p></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="quiz">
     <div class="wrap quiz">
-      <div class="sec-head" style="margin:0">
-        <span class="eyebrow">اختبار سريع</span>
-        <h2>ابنك ينفع في أنهي لعبة؟</h2>
-        <p>5 أسئلة بسيطة عن شخصية ابنك أو بنتك، وفي الآخر هنرشّحلك اللعبة الأنسب. وفي أول حصة الكابتن هيعمل تقييم حقيقي ويأكد الاختيار.</p>
+      <div class="head rv" style="margin:0">
+        <span class="tag"><i></i>اختبار سريع</span>
+        <h2>ابنك ينفع في <em>أنهي لعبة؟</em></h2>
+        <p>جاوب على 5 أسئلة بسيطة عن شخصية ابنك أو بنتك، وهنرشّحلك اللعبة الأنسب. وفي أول حصة الكابتن هيأكد الاختيار بتقييم حقيقي.</p>
       </div>
-      <div class="quiz-card" id="quizCard" aria-live="polite"></div>
+      <div class="quiz-card rv d1" id="quizCard" aria-live="polite"></div>
     </div>
   </section>
 
-  <section id="staff">
+  <section id="staff" style="background:var(--sun-l)">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">الإدارة الفنية</span>
-        <h2>تدريب بمنهج علمي، مش بالفهلوة</h2>
-        <p>الأكاديمية بيديرها أساتذة من كلية علوم الرياضة. ده معناه برامج تدريب مدروسة، متابعة لمستوى كل طفل، وأمان في كل تمرين.</p>
+      <div class="head center rv">
+        <span class="tag" style="background:#fff"><i></i>الإدارة الفنية</span>
+        <h2>ابنك في <em>إيد أمينة</em></h2>
+        <p>الأكاديمية بيديرها أساتذة من كلية علوم الرياضة.</p>
       </div>
       <div class="staff">
-        <article class="person">
-          <div class="ph"><img src="assets/dr-ahmed.jpg" alt="أ.د. أحمد عبدالله" width="480" height="640" loading="lazy"></div>
-          <div>
+        <article class="person rv">
+          <div class="ph"><img src="assets/dr-ahmed.jpg" alt="أ.د. أحمد عبدالله" loading="lazy"></div>
+          <div class="tx">
             <span class="role">المدير الفني</span>
             <h3>أ.د. أحمد عبدالله</h3>
             <p>أستاذ ورئيس قسم التدريب الرياضي، وعميد كلية علوم الرياضة سابقاً. بيشرف بنفسه على برامج التدريب ومستويات اللاعبين في كل الألعاب.</p>
           </div>
         </article>
-        <article class="person">
-          <div class="ph"><img src="assets/dr-elsayed.jpg" alt="د. السيد رفاعي" width="480" height="640" loading="lazy"></div>
-          <div>
+        <article class="person rv d1">
+          <div class="ph"><img src="assets/dr-elsayed.jpg" alt="د. السيد رفاعي" loading="lazy"></div>
+          <div class="tx">
             <span class="role">المدير الإداري</span>
             <h3>د. السيد رفاعي</h3>
             <p>عضو هيئة التدريس بقسم الإدارة الرياضية. مسؤول عن تنظيم المواعيد والاشتراكات والتواصل مع أولياء الأمور.</p>
@@ -315,24 +438,14 @@ footer img{height:56px;width:auto}
     </div>
   </section>
 
-  <section style="padding-top:0">
+  <section id="schedule">
     <div class="wrap">
-      <div class="method">
-        <div><span class="k">تقييم</span><h3>اختبار لياقة في أول حصة</h3><p>سرعة، مرونة، توازن، وتوافق. بنعرف ابنك بيبدأ منين قبل ما نبدأ.</p></div>
-        <div><span class="k">متابعة</span><h3>تقرير مستوى كل شهر</h3><p>ولي الأمر بيوصله تقرير بتطور ابنه، عشان تشوف الفرق بعينك.</p></div>
-        <div><span class="k">أمان</span><h3>أحمال تدريب مناسبة للسن</h3><p>البرامج متصممة على أسس علمية تحمي الطفل من الإصابة والإجهاد.</p></div>
+      <div class="head rv">
+        <span class="tag"><i></i>المواعيد والأسعار</span>
+        <h2>جدول <em>التمرين</em></h2>
+        <p>المواعيد بتتحدد حسب السن والمستوى. اللي مكتوب عنده «اسأل على واتساب» هنبعتلك تفاصيله فوراً.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="schedule" style="background:var(--ink-2);border-block:1px solid var(--line)">
-    <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">المواعيد والأسعار</span>
-        <h2>جدول التمرين</h2>
-        <p>المواعيد بتتحدد حسب السن والمستوى. اللي لسه مكتوب عنده «اسأل على واتساب» هنبعتلك تفاصيله فوراً.</p>
-      </div>
-      <div class="tbl-wrap">
+      <div class="tbl rv">
         <table>
           <thead><tr><th>اللعبة</th><th>الأعمار</th><th>الأيام</th><th>المعاد</th><th>الاشتراك الشهري</th></tr></thead>
           <tbody id="schedBody"></tbody>
@@ -342,47 +455,33 @@ footer img{height:56px;width:auto}
     </div>
   </section>
 
-  <section id="join">
+  <section id="join" class="join-sec">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">الاشتراك والدفع</span>
-        <h2>اشترك وادفع من البيت</h2>
-        <p>من غير ما تيجي المكان: املا البيانات، ادفع بإنستاباي، وابعت صورة التحويل على واتساب. هنأكدلك الاشتراك في نفس اليوم.</p>
+      <div class="head center rv">
+        <span class="tag" style="background:#fff"><i></i>الاشتراك والدفع</span>
+        <h2>اشترك وادفع <em>من البيت</em></h2>
+        <p>املا البيانات، ادفع بإنستاباي، وابعت صورة التحويل على واتساب. هنأكدلك الاشتراك في نفس اليوم.</p>
       </div>
       <div class="join">
-        <div class="panel">
-          <ol class="steps">
-            <li><div><b>اختار اللعبة وبيانات ابنك</b><span>الاسم والسن ورقم ولي الأمر.</span></div></li>
-            <li><div><b>ادفع بإنستاباي</b><span>هيظهرلك المبلغ وبيانات التحويل.</span></div></li>
-            <li><div><b>ابعت الإيصال على واتساب</b><span>رسالة جاهزة فيها كل البيانات، ترفق معاها سكرين شوت التحويل.</span></div></li>
-            <li><div><b>تأكيد الاشتراك</b><span>الإدارة بتراجع وتبعتلك التأكيد ومواعيد أول تمرين.</span></div></li>
-          </ol>
-        </div>
-        <div class="panel" id="joinPanel">
+        <ol class="steps">
+          <li class="rv"><div><b>اختار اللعبة وبيانات ابنك</b><span>الاسم والسن ورقم ولي الأمر.</span></div></li>
+          <li class="rv d1"><div><b>ادفع بإنستاباي</b><span>هيظهرلك المبلغ وبيانات التحويل.</span></div></li>
+          <li class="rv d2"><div><b>ابعت الإيصال على واتساب</b><span>رسالة جاهزة فيها كل البيانات، وترفق معاها صورة التحويل.</span></div></li>
+          <li class="rv d3"><div><b>تأكيد الاشتراك</b><span>الإدارة بتراجع وتبعتلك التأكيد ومعاد أول تمرين.</span></div></li>
+        </ol>
+        <div class="panel rv d1" id="joinPanel">
+          <h3>احجز لابنك دلوقتي</h3>
           <form id="joinForm" novalidate>
-            <label for="fSport">اللعبة
-              <select id="fSport" required></select>
-            </label>
+            <label for="fSport">اللعبة<select id="fSport"></select></label>
             <div class="row2">
-              <label for="fName">اسم الطفل
-                <input id="fName" autocomplete="off" placeholder="مثلاً: يوسف أحمد" required>
-              </label>
-              <label for="fAge">السن
-                <input id="fAge" type="number" inputmode="numeric" min="3" max="18" placeholder="بالسنين" required>
-              </label>
+              <label for="fName">اسم الطفل<input id="fName" autocomplete="off" placeholder="مثلاً: يوسف أحمد"></label>
+              <label for="fAge">السن<input id="fAge" type="number" inputmode="numeric" min="3" max="18" placeholder="بالسنين"></label>
             </div>
-            <label for="fParent">اسم ولي الأمر
-              <input id="fParent" autocomplete="name" placeholder="الاسم بالكامل" required>
-            </label>
-            <label for="fPhone">موبايل ولي الأمر
-              <input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr" required>
-            </label>
-            <div>
-              <span style="font-family:var(--f-display);font-size:14px;color:var(--silver-2)">نوع الطلب</span>
-              <div class="seg" style="margin-top:6px">
-                <input type="radio" name="kind" id="kTrial" value="trial" checked><label for="kTrial">حصة تجريبية مجانية</label>
-                <input type="radio" name="kind" id="kSub" value="sub"><label for="kSub">اشتراك شهري</label>
-              </div>
+            <label for="fParent">اسم ولي الأمر<input id="fParent" autocomplete="name" placeholder="الاسم بالكامل"></label>
+            <label for="fPhone">موبايل ولي الأمر<input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr"></label>
+            <div class="seg">
+              <input type="radio" name="kind" id="kTrial" value="trial" checked><label for="kTrial">حصة تجريبية مجانية</label>
+              <input type="radio" name="kind" id="kSub" value="sub"><label for="kSub">اشتراك شهري</label>
             </div>
             <p class="err" id="fErr" role="alert"></p>
             <button class="btn btn-green" type="submit">كمّل</button>
@@ -393,16 +492,41 @@ footer img{height:56px;width:auto}
     </div>
   </section>
 
-  <section id="contact" style="padding-top:0">
+  <section id="faq">
     <div class="wrap">
-      <div class="sec-head">
-        <span class="eyebrow">تواصل معانا</span>
-        <h2>إحنا على بعد رسالة</h2>
+      <div class="head center rv">
+        <span class="tag"><i></i>أسئلة بتتسأل كتير</span>
+        <h2>عندك <em>سؤال؟</em></h2>
+      </div>
+      <div class="faq">
+        <details class="rv"><summary>ابني يقدر يبدأ رياضة من سن كام؟</summary><p>الجمباز واللياقة ممكن يبدأوا من سن صغير، وباقي الألعاب حسب سن الطفل ونموّه. في الحصة التجريبية الكابتن بيقيّم ابنك ويقولك الأنسب.</p></details>
+        <details class="rv"><summary>الحصة التجريبية مجانية فعلاً؟</summary><p>أيوه، أول حصة مجانية بالكامل. احجزها على واتساب أو من فورم الاشتراك تحت.</p></details>
+        <details class="rv"><summary>ينفع ابني يشترك في أكتر من لعبة؟</summary><p>طبعاً، وده من أحلى حاجات أيكون: 8 ألعاب في مكان واحد. اسألنا على عروض الألعاب المتعددة والإخوات.</p></details>
+        <details class="rv"><summary>إزاي أدفع الاشتراك؟</summary><p>تقدر تدفع بإنستاباي من البيت، وتبعت صورة التحويل على واتساب، والإدارة بتأكد الاشتراك في نفس اليوم.</p></details>
+        <details class="rv"><summary>ابني يجيب معاه إيه في أول حصة؟</summary><p>لبس رياضي مريح، جزمة رياضية، وزجاجة مياه. وفي الكاراتيه والجمباز الكابتن هيقولك على اللبس المناسب.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-block:0">
+    <div class="wrap">
+      <div class="band rv">
+        <div><h2>جاهز تشوف ابنك بطل؟</h2><p>احجز الحصة المجانية النهارده، والأماكن محدودة في كل مجموعة.</p></div>
+        <a class="btn btn-sun js-trial" href="#" target="_blank" rel="noopener">احجز على واتساب</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding-bottom:0">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="tag"><i></i>تواصل معانا</span>
+        <h2>إحنا على بعد <em>رسالة</em></h2>
       </div>
       <div class="contact">
-        <a class="js-wa" href="#" target="_blank" rel="noopener"><span class="lbl">واتساب الحجز</span><span class="val ltr" id="waNum"></span></a>
-        <a class="js-call" href="#"><span class="lbl">موبايل وانستجرام</span><span class="val ltr" id="callNum"></span></a>
-        <a id="fbLink" href="#" target="_blank" rel="noopener"><span class="lbl">صفحتنا على فيسبوك</span><span class="val">أكاديمية أيكون - فرع سوهاج</span></a>
+        <a class="js-wa rv" href="#" target="_blank" rel="noopener"><span class="i"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.2-.3-.3-.6-.5Z"/></svg></span><span><span class="lbl">واتساب الحجز</span><span class="val ltr" id="waNum"></span></span></a>
+        <a class="js-call rv d1" href="#"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><span><span class="lbl">موبايل وانستجرام</span><span class="val ltr" id="callNum"></span></span></a>
+        <a id="fbLink" class="rv d2" href="#" target="_blank" rel="noopener"><span class="i"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9V7c0-.9.6-1 1-1h3V2h-4c-3.3 0-4 2.4-4 4v3H7v4h3v9h4v-9h3.5l.5-4z"/></svg></span><span><span class="lbl">صفحتنا على فيسبوك</span><span class="val">أيكون سوهاج</span></span></a>
       </div>
       <p class="note" id="addr"></p>
     </div>
@@ -411,14 +535,14 @@ footer img{height:56px;width:auto}
 
 <footer>
   <div class="wrap">
-    <img src="assets/logo-on-dark-sm.png" alt="أيكون" width="42" height="56">
-    <span>أكاديمية أيكون للألعاب الرياضية - فرع سوهاج · توكيل رسمي</span>
-    <span>© <span id="yr"></span></span>
+    <div class="fb"><img src="assets/logo.jpg" alt="أيكون" width="64" height="64"><div><b>أكاديمية أيكون للألعاب الرياضية</b><small>فرع سوهاج · توكيل رسمي</small></div></div>
+    <span class="credit">© <span id="yr"></span> أيكون سوهاج · صور الألعاب من <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a></span>
   </div>
 </footer>
 
 <a class="fab js-wa" href="#" target="_blank" rel="noopener" aria-label="كلّمنا على واتساب">
   <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7 0a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.4 6.4 0 0 0 1.3 3.4 14.7 14.7 0 0 0 5.6 5c2.1.9 2.9 1 4 .8a3.4 3.4 0 0 0 2.2-1.6 2.8 2.8 0 0 0 .2-1.6c0-.2-.3-.3-.6-.5Z"/></svg>
+  <span class="bubble">احجز حصة مجانية 👋</span>
 </a>
 <div class="toast" id="toast" hidden></div>
 
@@ -429,40 +553,42 @@ const CONFIG = {
   whatsappReceipts: "201151699699",  // استلام إيصالات الدفع
   phone: "01151699699",              // موبايل وانستجرام
   facebook: "https://www.facebook.com/profile.php?id=100063880390677",
-  instapay: "",        // مثال: "iconsohag@instapay" — لو فاضي بيظهر "هيتأكد على واتساب"
-  instapayLink: "",    // لينك الدفع المباشر من تطبيق إنستاباي (ipn.eg/...) لو موجود
-  wallet: "",          // رقم محفظة (فودافون كاش مثلاً) لو موجود
+  instapay: "",        // مثال: "iconsohag@instapay" — لو فاضي بيظهر "هتوصلك على واتساب"
+  instapayLink: "",    // لينك الدفع المباشر من تطبيق إنستاباي لو موجود
+  wallet: "",          // رقم محفظة لو موجود
   address: "سوهاج — العنوان والخريطة هيتضافوا قريب",
   mapLink: ""
 };
-// السعر بالجنيه (null = اسأل على واتساب). الأعمار والأيام والمعاد نص حر.
+// price: السعر بالجنيه (null = اسأل على واتساب). ages/days/time: نص حر. img: كود صورة Unsplash
 const SPORTS = [
-  {id:"fitness",  name:"لياقة بدنية", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية. مناسبة للكبار والصغار.", ages:"", days:"", time:"", price:null},
-  {id:"gym",      name:"جمباز",       desc:"مرونة وتوازن وثقة بالنفس من سن صغير. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:null},
-  {id:"tennis",   name:"تنس أرضي",    desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي، بمدربين متخصصين.", ages:"", days:"", time:"", price:null},
-  {id:"tt",       name:"تنس طاولة",   desc:"سرعة بديهة ودقة وتركيز. لعبة ممتعة ومناسبة لكل الأعمار.", ages:"", days:"", time:"", price:null},
-  {id:"volley",   name:"كرة طائرة",   desc:"روح الفريق والقفز والتوقيت. مناسبة جداً للبنات والولاد.", ages:"", days:"", time:"", price:null},
-  {id:"hand",     name:"كرة يد",      desc:"قوة وسرعة وشغل جماعي. لعبة الطفل اللي عنده طاقة عالية.", ages:"", days:"", time:"", price:null},
-  {id:"basket",   name:"كرة سلة",     desc:"طول ورشاقة ومهارة تحكم في الكورة، واتخاذ قرار سريع.", ages:"", days:"", time:"", price:null},
-  {id:"karate",   name:"كاراتيه",     desc:"انضباط واحترام ودفاع عن النفس، مع أحزمة ومستويات واضحة.", ages:"", days:"", time:"", price:null}
+  {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية.", ages:"", days:"", time:"", price:null},
+  {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:null},
+  {id:"tennis",  name:"تنس أرضي",    img:"OVWxgiJ8qV0", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:null},
+  {id:"tt",      name:"تنس طاولة",   img:"7h9wGq4IUdE", desc:"سرعة بديهة ودقة وتركيز، ومتعة لكل الأعمار.", ages:"", days:"", time:"", price:null},
+  {id:"volley",  name:"كرة طائرة",   img:"aZVpxRydiJk", desc:"روح الفريق والقفز والتوقيت، للبنات والولاد.", ages:"", days:"", time:"", price:null},
+  {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي للطفل اللي طاقته عالية.", ages:"", days:"", time:"", price:null},
+  {id:"basket",  name:"كرة سلة",     img:"jbsr6R7CRik", desc:"رشاقة ومهارة وتحكم في الكورة وقرار سريع.", ages:"", days:"", time:"", price:null},
+  {id:"karate",  name:"كاراتيه",     img:"ryOMte-FerE", desc:"انضباط واحترام ودفاع عن النفس، بأحزمة ومستويات.", ages:"", days:"", time:"", price:null}
 ];
 /* ================================================= */
 
 const ICONS = {
-  fitness:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M6 20v8M11 15v18M37 15v18M42 20v8M11 24h26"/></svg>',
-  gym:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="8" r="4"/><path d="M24 13v14M24 18 12 10M24 18l12-8M24 27l-9 15M24 27l9 15"/><path d="M8 40c6 2 10-4 16-2s10 4 16 0" stroke-width="2"/></svg>',
-  tennis:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M10 13c8 6 8 16 0 22M38 13c-8 6-8 16 0 22"/></svg>',
-  tt:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="m28 28 11 11"/><circle cx="38" cy="12" r="3.5" fill="currentColor"/></svg>',
-  volley:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M24 7c-2 10 2 16 12 21M7.5 27c8-2 13-8 13-18M14 38c6-7 14-9 24-6"/></svg>',
-  hand:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 7v6l-7 5 3 8h8l3-8-7-5M17 18l-9-2M31 18l9-2M20 26l-5 9M28 26l5 9"/></svg>',
-  basket:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7v34M12 12c6 6 6 18 0 24M36 12c-6 6-6 18 0 24"/></svg>',
-  karate:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h36M18 20l-6 20M30 20l6 20"/><path d="M20 14h8l2 6h-12z"/></svg>'
+  fitness:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M6 20v8M11 15v18M37 15v18M42 20v8M11 24h26"/></svg>',
+  gym:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="8" r="4"/><path d="M24 13v14M24 18 12 10M24 18l12-8M24 27l-9 15M24 27l9 15"/></svg>',
+  tennis:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2"><circle cx="24" cy="24" r="17"/><path d="M10 13c8 6 8 16 0 22M38 13c-8 6-8 16 0 22"/></svg>',
+  tt:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="m28 28 11 11"/><circle cx="38" cy="12" r="3.5" fill="currentColor"/></svg>',
+  volley:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2"><circle cx="24" cy="24" r="17"/><path d="M24 7c-2 10 2 16 12 21M7.5 27c8-2 13-8 13-18M14 38c6-7 14-9 24-6"/></svg>',
+  hand:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 7v6l-7 5 3 8h8l3-8-7-5M17 18l-9-2M31 18l9-2M20 26l-5 9M28 26l5 9"/></svg>',
+  basket:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7v34M12 12c6 6 6 18 0 24M36 12c-6 6-6 18 0 24"/></svg>',
+  karate:'<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20h36M18 20l-6 20M30 20l6 20"/><path d="M20 14h8l2 6h-12z"/></svg>'
 };
+const IMG = (id, w) => "https://unsplash.com/photos/" + id + "/download?w=" + (w || 800);
 
 const $ = s => document.querySelector(s);
 const wa = (num, text) => "https://wa.me/" + num + (text ? "?text=" + encodeURIComponent(text) : "");
 const fmtNum = n => n.replace(/^20/, "0");
 const priceTxt = p => p == null ? "اسأل على واتساب" : p.toLocaleString("ar-EG") + " ج.م";
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 // links
 document.querySelectorAll(".js-trial").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عايز أحجز حصة تجريبية مجانية في أكاديمية أيكون سوهاج"));
@@ -470,67 +596,92 @@ document.querySelectorAll(".js-wa").forEach(a => a.href = wa(CONFIG.whatsappBook
 document.querySelectorAll(".js-call").forEach(a => a.href = "tel:+2" + CONFIG.phone);
 $("#waNum").textContent = fmtNum(CONFIG.whatsappBooking);
 $("#callNum").textContent = CONFIG.phone;
+$("#topPhone").textContent = "📞 " + CONFIG.phone;
 $("#fbLink").href = CONFIG.facebook;
-$("#addr").textContent = "العنوان: " + CONFIG.address;
+$("#addr").innerHTML = "📍 " + CONFIG.address + (CONFIG.mapLink ? ` · <a href="${CONFIG.mapLink}" target="_blank" rel="noopener">افتح الخريطة</a>` : "");
 $("#yr").textContent = new Date().getFullYear();
+
+// marquee
+const names = SPORTS.map(s => `<span>${s.name}</span>`).join("");
+$("#track").innerHTML = names + names + names + names;
+
+// hero slider
+const slides = [...document.querySelectorAll(".slide")];
+const heroCopy = [
+  ["أيكون وصلت سوهاج!<br><span>ابنك يستاهل يبقى أيكون</span>", "8 ألعاب في مكان واحد، بمنهج علمي وتحت إشراف أ.د. أحمد عبدالله، عميد كلية علوم الرياضة سابقاً."],
+  ["كرة سلة وطائرة ويد<br><span>روح الفريق بتبدأ هنا</span>", "ألعاب جماعية بتعلّم ابنك التعاون والقيادة وسرعة القرار."],
+  ["كاراتيه بأحزمة ومستويات<br><span>ثقة وانضباط</span>", "دفاع عن النفس واحترام والتزام، مع مدربين متخصصين."],
+  ["جمباز ولياقة<br><span>مرونة وصحة من الصغر</span>", "أحسن بداية لأي طفل قبل ما يختار لعبته."]
+];
+const dots = $("#dots");
+slides.forEach((_, i) => { const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "صورة " + (i + 1)); if (!i) b.className = "on"; b.onclick = () => go(i, true); dots.appendChild(b); });
+let cur = 0, timer;
+function go(i, user){
+  slides[cur].classList.remove("on"); dots.children[cur].classList.remove("on");
+  cur = (i + slides.length) % slides.length;
+  slides[cur].classList.add("on"); dots.children[cur].classList.add("on");
+  const h = $("#heroH"), p = $("#heroP");
+  h.innerHTML = heroCopy[cur][0]; p.textContent = heroCopy[cur][1];
+  [h, p].forEach(el => { el.style.animation = "none"; el.offsetHeight; el.style.animation = ""; });
+  if (user) start();
+}
+function start(){ clearInterval(timer); if (!reduce) timer = setInterval(() => go(cur + 1), 5500); }
+start();
 
 // sports grid + schedule + select
 const grid = $("#sportsGrid"), sched = $("#schedBody"), sel = $("#fSport");
 SPORTS.forEach((s, i) => {
   const el = document.createElement("article");
-  el.className = "sport";
-  el.innerHTML = `<span class="num">0${i+1}</span><div class="ic">${ICONS[s.id]}</div><h3>${s.name}</h3><p>${s.desc}</p>
-    <div class="meta"><span>الأعمار: <b>${s.ages || "حسب التقييم"}</b></span><span>الاشتراك: <b>${priceTxt(s.price)}</b></span></div>
-    <button class="go" type="button" data-id="${s.id}">احجز ${s.name} ←</button>`;
+  el.className = "card rv" + (i % 4 ? " d" + (i % 4) : "");
+  el.innerHTML = `<div class="ph"><img src="${IMG(s.img)}" alt="${s.name}" loading="lazy"><span class="ic">${ICONS[s.id]}</span></div>
+    <div class="body"><h3>${s.name}</h3><p>${s.desc}</p>
+    <div class="meta"><span>الأعمار: ${s.ages || "حسب التقييم"}</span><span>${priceTxt(s.price)}</span></div>
+    <button class="go" type="button" data-id="${s.id}">احجز ${s.name} <b>←</b></button></div>`;
   grid.appendChild(el);
   const tr = document.createElement("tr");
-  const c = v => v ? `<td>${v}</td>` : `<td class="soon">اسأل على واتساب</td>`;
-  tr.innerHTML = `<td><b>${s.name}</b></td>${c(s.ages)}${c(s.days)}${c(s.time)}${c(s.price != null ? priceTxt(s.price) : "")}`;
+  const c = v => v ? `<td>${v}</td>` : `<td class="ask">اسأل على واتساب</td>`;
+  tr.innerHTML = `<td><span class="dot"></span><b>${s.name}</b></td>${c(s.ages)}${c(s.days)}${c(s.time)}${c(s.price != null ? priceTxt(s.price) : "")}`;
   sched.appendChild(tr);
   const o = document.createElement("option"); o.value = s.id; o.textContent = s.name; sel.appendChild(o);
 });
-grid.addEventListener("click", e => {
-  const b = e.target.closest(".go"); if (!b) return;
-  pickSport(b.dataset.id);
-});
+grid.addEventListener("click", e => { const b = e.target.closest(".go"); if (b) pickSport(b.dataset.id); });
 function pickSport(id){
   sel.value = id; resetJoin();
-  $("#join").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
-  setTimeout(() => $("#fName").focus({preventScroll:true}), 500);
+  $("#joinPanel").scrollIntoView({behavior: reduce ? "auto" : "smooth", block: "center"});
+  setTimeout(() => $("#fName").focus({preventScroll: true}), 600);
 }
 
 // quiz
 const QUIZ = [
-  {q:"ابنك/بنتك عنده طاقة إزاي؟", a:[["طاقة عالية جداً، مبيقعدش",{hand:2,basket:2,fitness:1,karate:1}],["نشيط بس بيحب يركز في حاجة",{tennis:2,tt:2}],["هادي ومرن وبيحب الحركات",{gym:3}]]},
-  {q:"بيحب يلعب لوحده ولا مع فريق؟", a:[["مع فريق وصحابه",{volley:2,basket:2,hand:2}],["لوحده ويتحدى نفسه",{tennis:2,tt:2,karate:1,gym:1}],["الاتنين عادي",{fitness:2}]]},
-  {q:"إيه أكتر حاجة نفسك تبنيها فيه؟", a:[["الثقة بالنفس والانضباط",{karate:3,gym:1}],["التركيز وسرعة البديهة",{tt:3,tennis:1}],["اللياقة والصحة العامة",{fitness:3}],["روح التعاون والقيادة",{volley:1,basket:1,hand:1}]]},
-  {q:"ابنك طوله بالنسبة لسنه؟", a:[["أطول من سنه",{basket:2,volley:2}],["متوسط",{hand:1,tennis:1,karate:1}],["أقصر وخفيف الحركة",{gym:2,tt:1}]]},
-  {q:"لما يتفرج على ماتش أو بطولة، بيتشد لإيه؟", a:[["الكورة والأهداف",{hand:2,basket:2}],["المضارب والتنس",{tennis:2,tt:2}],["أفلام الأكشن والقتال",{karate:3}],["الاستعراض والحركات الصعبة",{gym:3}]]}
+  {q:"ابنك/بنتك طاقته عاملة إزاي؟", a:[["⚡ طاقة عالية جداً، مبيقعدش",{hand:2,basket:2,fitness:1,karate:1}],["🎯 نشيط بس بيحب يركز في حاجة",{tennis:2,tt:2}],["🤸 هادي ومرن وبيحب الحركات",{gym:3}]]},
+  {q:"بيحب يلعب لوحده ولا مع فريق؟", a:[["👫 مع فريق وصحابه",{volley:2,basket:2,hand:2}],["🧍 لوحده ويتحدى نفسه",{tennis:2,tt:2,karate:1,gym:1}],["🙂 الاتنين عادي",{fitness:2}]]},
+  {q:"إيه أكتر حاجة نفسك تبنيها فيه؟", a:[["🥋 الثقة بالنفس والانضباط",{karate:3,gym:1}],["🧠 التركيز وسرعة البديهة",{tt:3,tennis:1}],["💪 اللياقة والصحة",{fitness:3}],["🤝 التعاون والقيادة",{volley:1,basket:1,hand:1}]]},
+  {q:"طوله بالنسبة لسنه؟", a:[["📏 أطول من سنه",{basket:2,volley:2}],["👌 متوسط",{hand:1,tennis:1,karate:1}],["🐇 أقصر وخفيف الحركة",{gym:2,tt:1}]]},
+  {q:"لما يتفرج على ماتش، بيتشد لإيه؟", a:[["🏀 الكورة والأهداف",{hand:2,basket:2}],["🎾 المضارب والتنس",{tennis:2,tt:2}],["🥷 أفلام الأكشن والقتال",{karate:3}],["✨ الحركات الصعبة والاستعراض",{gym:3}]]}
 ];
 let qi = 0, score = {};
 function renderQuiz(){
   const card = $("#quizCard");
   if (qi < QUIZ.length){
     const q = QUIZ[qi];
-    card.innerHTML = `<div class="q-prog">${QUIZ.map((_,i)=>`<i class="${i<=qi?"on":""}"></i>`).join("")}</div>
-      <div class="q-step">سؤال ${qi+1} من ${QUIZ.length}</div>
-      <div class="q-title">${q.q}</div>
-      <div class="q-opts">${q.a.map((o,i)=>`<button type="button" data-i="${i}">${o[0]}</button>`).join("")}</div>`;
+    card.innerHTML = `<div class="q-prog">${QUIZ.map((_, i) => `<i class="${i <= qi ? "on" : ""}"></i>`).join("")}</div>
+      <div class="q-step">سؤال ${qi + 1} من ${QUIZ.length}</div><div class="q-title">${q.q}</div>
+      <div class="q-opts">${q.a.map((o, i) => `<button type="button" data-i="${i}">${o[0]}</button>`).join("")}</div>`;
     card.querySelectorAll(".q-opts button").forEach(b => b.onclick = () => {
       const pts = q.a[+b.dataset.i][1];
-      for (const k in pts) score[k] = (score[k]||0) + pts[k];
+      for (const k in pts) score[k] = (score[k] || 0) + pts[k];
       qi++; renderQuiz();
     });
   } else {
-    const ranked = SPORTS.map(s => [s, score[s.id]||0]).sort((a,b)=>b[1]-a[1]);
-    const [top, second, third] = ranked;
-    card.innerHTML = `<div class="q-result"><div class="q-step">ترشيحنا</div>
-      <div class="pick">${top[0].name}</div>
-      <p>${top[0].desc}</p>
-      <p class="alt">ممكن كمان يناسبه: ${second[0].name} أو ${third[0].name}.</p>
-      <div class="cta-row"><button class="btn btn-green" type="button" id="qBook">احجز حصة ${top[0].name} المجانية</button>
-      <button class="btn btn-ghost" type="button" id="qAgain">أعيد الاختبار</button></div></div>`;
-    $("#qBook").onclick = () => pickSport(top[0].id);
+    const r = SPORTS.map(s => [s, score[s.id] || 0]).sort((a, b) => b[1] - a[1]);
+    const top = r[0][0];
+    card.innerHTML = `<div class="q-res"><div class="q-step">🎉 ترشيحنا لابنك</div>
+      <div class="pick-img"><img src="${IMG(top.img, 900)}" alt="${top.name}"></div>
+      <div class="pick">${top.name}</div><p>${top.desc}</p>
+      <p class="alt">وممكن كمان يناسبه: ${r[1][0].name} أو ${r[2][0].name}.</p>
+      <div class="row"><button class="btn btn-green" type="button" id="qBook">احجز حصة ${top.name} المجانية</button>
+      <button class="btn btn-line" type="button" id="qAgain">أعيد الاختبار</button></div></div>`;
+    $("#qBook").onclick = () => pickSport(top.id);
     $("#qAgain").onclick = () => { qi = 0; score = {}; renderQuiz(); };
   }
 }
@@ -539,54 +690,67 @@ renderQuiz();
 // join / pay
 const form = $("#joinForm"), payBox = $("#payBox");
 function resetJoin(){ form.hidden = false; payBox.hidden = true; }
+function esc(s){ return s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
 form.addEventListener("submit", e => {
   e.preventDefault();
-  const d = {
-    sport: SPORTS.find(s => s.id === sel.value),
-    name: $("#fName").value.trim(), age: $("#fAge").value.trim(),
-    parent: $("#fParent").value.trim(), phone: $("#fPhone").value.trim().replace(/\s/g,""),
-    kind: form.querySelector('input[name="kind"]:checked').value
-  };
+  const d = { sport: SPORTS.find(s => s.id === sel.value), name: $("#fName").value.trim(), age: $("#fAge").value.trim(),
+    parent: $("#fParent").value.trim(), phone: $("#fPhone").value.trim().replace(/\s/g, ""),
+    kind: form.querySelector('input[name="kind"]:checked').value };
   const err = $("#fErr");
   if (!d.name || !d.age || !d.parent) { err.textContent = "من فضلك اكتب اسم الطفل وسنه واسم ولي الأمر."; return; }
   if (!/^(\+?20|0)?1[0125]\d{8}$/.test(d.phone)) { err.textContent = "رقم الموبايل لازم يكون رقم مصري صحيح، زي 01012345678."; return; }
   err.textContent = "";
-  const lines = [
-    d.kind === "trial" ? "طلب حجز حصة تجريبية مجانية - أيكون سوهاج" : "طلب اشتراك شهري - أيكون سوهاج",
-    "اللعبة: " + d.sport.name, "اسم الطفل: " + d.name, "السن: " + d.age,
-    "ولي الأمر: " + d.parent, "الموبايل: " + d.phone
-  ];
+  const lines = [d.kind === "trial" ? "طلب حجز حصة تجريبية مجانية - أيكون سوهاج" : "طلب اشتراك شهري - أيكون سوهاج",
+    "اللعبة: " + d.sport.name, "اسم الطفل: " + d.name, "السن: " + d.age, "ولي الأمر: " + d.parent, "الموبايل: " + d.phone];
   form.hidden = true; payBox.hidden = false;
+  const sum = `<div class="sum"><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div>`;
   if (d.kind === "trial"){
-    payBox.innerHTML = `<div class="sum"><div><span>الطلب</span><b>حصة تجريبية مجانية</b></div><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div></div>
-      <p>اضغط الزرار وابعت الرسالة الجاهزة على واتساب، وهنرد عليك بالمعاد المناسب.</p>
+    payBox.innerHTML = `${sum}<div><span>الطلب</span><b>حصة تجريبية مجانية 🎁</b></div></div>
+      <p>دوس على الزرار وابعت الرسالة الجاهزة على واتساب، وهنرد عليك بالمعاد المناسب.</p>
       <a class="btn btn-green" target="_blank" rel="noopener" href="${wa(CONFIG.whatsappBooking, lines.join("\n"))}">ابعت طلب الحجز على واتساب</a>
-      <button class="btn btn-ghost" type="button" id="back">تعديل البيانات</button>`;
+      <button class="btn btn-line" type="button" id="back">تعديل البيانات</button>`;
   } else {
     const amt = d.sport.price;
-    const ipLine = CONFIG.instapay
+    const ip = CONFIG.instapay
       ? `<div class="payline"><div><div class="lbl">حوّل على إنستاباي</div><div class="val">${CONFIG.instapay}</div></div><button class="copy" type="button" data-copy="${CONFIG.instapay}">نسخ</button></div>`
       : `<div class="payline"><div><div class="lbl">بيانات إنستاباي</div><div>هتوصلك على واتساب مع تأكيد المبلغ</div></div></div>`;
-    const wLine = CONFIG.wallet ? `<div class="payline"><div><div class="lbl">أو محفظة</div><div class="val">${CONFIG.wallet}</div></div><button class="copy" type="button" data-copy="${CONFIG.wallet}">نسخ</button></div>` : "";
-    const payBtn = CONFIG.instapayLink ? `<a class="btn btn-green" target="_blank" rel="noopener" href="${CONFIG.instapayLink}">ادفع الآن بإنستاباي</a>` : "";
+    const wl = CONFIG.wallet ? `<div class="payline"><div><div class="lbl">أو محفظة</div><div class="val">${CONFIG.wallet}</div></div><button class="copy" type="button" data-copy="${CONFIG.wallet}">نسخ</button></div>` : "";
+    const pb = CONFIG.instapayLink ? `<a class="btn btn-sun" target="_blank" rel="noopener" href="${CONFIG.instapayLink}">ادفع الآن بإنستاباي</a>` : "";
     lines.push(amt != null ? "المبلغ: " + amt + " جنيه" : "المبلغ: برجاء التأكيد", "مرفق صورة التحويل");
-    payBox.innerHTML = `<div class="sum"><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div>
-      <div><span>الاشتراك الشهري</span><span class="amount">${amt != null ? amt : "—"}</span></div>${amt == null ? '<div><span></span><span style="color:var(--muted)">السعر هيتأكدلك على واتساب</span></div>' : ""}</div>
-      ${ipLine}${wLine}${payBtn}
-      <a class="btn ${payBtn ? "btn-ghost" : "btn-green"}" target="_blank" rel="noopener" href="${wa(CONFIG.whatsappReceipts, lines.join("\n"))}">ابعت الإيصال على واتساب</a>
-      <p class="note" style="margin:0">ارفق سكرين شوت التحويل مع الرسالة. الاشتراك بيتأكد بعد مراجعة التحويل.</p>
-      <button class="btn btn-ghost" type="button" id="back">تعديل البيانات</button>`;
+    payBox.innerHTML = `${sum}<div><span>الاشتراك الشهري</span><span class="amount">${amt != null ? priceTxt(amt) : "هيتأكد على واتساب"}</span></div></div>
+      ${ip}${wl}${pb}
+      <a class="btn btn-green" target="_blank" rel="noopener" href="${wa(CONFIG.whatsappReceipts, lines.join("\n"))}">ابعت الإيصال على واتساب</a>
+      <p class="note" style="margin:0">ارفق صورة التحويل مع الرسالة. الاشتراك بيتأكد بعد مراجعة التحويل.</p>
+      <button class="btn btn-line" type="button" id="back">تعديل البيانات</button>`;
   }
   $("#back").onclick = resetJoin;
   payBox.querySelectorAll(".copy").forEach(b => b.onclick = () => copy(b.dataset.copy));
 });
-function esc(s){ return s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-function copy(t){
-  const done = () => toast("اتنسخ: " + t);
-  try { navigator.clipboard.writeText(t).then(done, () => toast(t)); } catch(e){ toast(t); }
-}
+function copy(t){ const ok = () => toast("اتنسخ: " + t); try { navigator.clipboard.writeText(t).then(ok, () => toast(t)); } catch (e) { toast(t); } }
 let tt;
 function toast(m){ const el = $("#toast"); el.textContent = m; el.hidden = false; clearTimeout(tt); tt = setTimeout(() => el.hidden = true, 2200); }
+
+// header shadow
+const nav = $("#nav");
+addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 10), {passive: true});
+
+// scroll reveal + counters
+const countUp = el => {
+  const end = +el.dataset.count, suf = el.dataset.suffix || "", t0 = performance.now(), dur = 1400;
+  const step = now => { const k = Math.min(1, (now - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - k, 3))); el.textContent = v + suf; if (k < 1) requestAnimationFrame(step); };
+  requestAnimationFrame(step);
+};
+if ("IntersectionObserver" in window && !reduce){
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (!en.isIntersecting) return;
+    en.target.classList.add("in");
+    en.target.querySelectorAll("[data-count]").forEach(countUp);
+    io.unobserve(en.target);
+  }), {threshold: .12, rootMargin: "0px 0px -40px 0px"});
+  document.querySelectorAll(".rv").forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll(".rv").forEach(el => el.classList.add("in"));
+}
 </script>
 </body>
 </html>
