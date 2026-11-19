@@ -34,7 +34,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.25;margin:0;text-wrap:balanc
 p{margin:0}
 .wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 section{padding-block:90px}
-.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--green-d);background:var(--mint);padding:6px 14px;border-radius:999px}
+.tag{justify-self:start;width:max-content;max-width:100%;display:inline-flex;align-items:center;gap:8px;font-family:var(--f-display);font-weight:700;font-size:14px;color:var(--green-d);background:var(--mint);padding:6px 14px;border-radius:999px}
 .tag i{width:8px;height:8px;border-radius:50%;background:var(--green);animation:blink 1.6s infinite}
 @keyframes blink{50%{opacity:.25}}
 .head{display:grid;gap:14px;margin-bottom:46px;max-width:760px}
@@ -122,9 +122,10 @@ header.nav .btn{padding:11px 20px;font-size:14px}
 
 /* sports */
 .sports{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.card{position:relative;background:#fff;border-radius:var(--r);overflow:hidden;box-shadow:0 2px 0 var(--line),0 10px 30px -20px rgba(0,60,20,.35);display:grid;grid-template-rows:auto 1fr;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;min-width:0}
+.card{position:relative;background:#fff;border-radius:var(--r);overflow:hidden;isolation:isolate;box-shadow:0 2px 0 var(--line),0 10px 30px -20px rgba(0,60,20,.35);display:grid;grid-template-rows:auto 1fr;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;min-width:0}
 .card:hover{transform:translateY(-8px);box-shadow:0 2px 0 var(--line),var(--shadow)}
-.card .ph{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--mint)}
+.card .ph{position:relative;aspect-ratio:4/3;background:var(--mint)}
+.card .ph .im{position:absolute;inset:0;overflow:hidden}
 .card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
 .card:hover .ph img{transform:scale(1.1)}
 .card .ic{position:absolute;bottom:-26px;right:18px;width:58px;height:58px;border-radius:18px;background:var(--green);color:#fff;display:grid;place-items:center;box-shadow:0 10px 20px -8px rgba(0,120,30,.7);transition:transform .4s}
@@ -563,7 +564,7 @@ const CONFIG = {
 const SPORTS = [
   {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية.", ages:"", days:"", time:"", price:null},
   {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:null},
-  {id:"tennis",  name:"تنس أرضي",    img:"OVWxgiJ8qV0", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:null},
+  {id:"tennis",  name:"تنس أرضي",    img:"WRByZhruW6o", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:null},
   {id:"tt",      name:"تنس طاولة",   img:"7h9wGq4IUdE", desc:"سرعة بديهة ودقة وتركيز، ومتعة لكل الأعمار.", ages:"", days:"", time:"", price:null},
   {id:"volley",  name:"كرة طائرة",   img:"aZVpxRydiJk", desc:"روح الفريق والقفز والتوقيت، للبنات والولاد.", ages:"", days:"", time:"", price:null},
   {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي للطفل اللي طاقته عالية.", ages:"", days:"", time:"", price:null},
@@ -633,7 +634,7 @@ const grid = $("#sportsGrid"), sched = $("#schedBody"), sel = $("#fSport");
 SPORTS.forEach((s, i) => {
   const el = document.createElement("article");
   el.className = "card rv" + (i % 4 ? " d" + (i % 4) : "");
-  el.innerHTML = `<div class="ph"><img src="${IMG(s.img)}" alt="${s.name}" loading="lazy"><span class="ic">${ICONS[s.id]}</span></div>
+  el.innerHTML = `<div class="ph"><div class="im"><img src="${IMG(s.img)}" alt="${s.name}" loading="lazy"></div><span class="ic">${ICONS[s.id]}</span></div>
     <div class="body"><h3>${s.name}</h3><p>${s.desc}</p>
     <div class="meta"><span>الأعمار: ${s.ages || "حسب التقييم"}</span><span>${priceTxt(s.price)}</span></div>
     <button class="go" type="button" data-id="${s.id}">احجز ${s.name} <b>←</b></button></div>`;
