@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>أكاديمية أيكون سوهاج</title>
-<meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب لولادك في مكان واحد: لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
+<meta name="description" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج. 8 ألعاب لكل الأعمار في مكان واحد (أطفال وناشئين وطلاب جامعة وكبار، ومدربات للبنات): لياقة بدنية، جمباز، تنس، تنس طاولة، طائرة، يد، سلة، كاراتيه. احجز حصة تجريبية مجانية.">
 <meta property="og:title" content="أكاديمية أيكون للألعاب الرياضية - فرع سوهاج">
-<meta property="og:description" content="8 ألعاب في مكان واحد، بمنهج تدريب علمي ومدربين متخصصين. احجز حصة مجانية.">
+<meta property="og:description" content="8 ألعاب لكل الأعمار من 4 سنين لفوق الـ20، ومدربات للبنات، بمنهج تدريب علمي ومدربين متخصصين. احجز حصة مجانية.">
 <meta property="og:image" content="https://mahmodshaban90-jpg.github.io/icon-sohag/assets/logo.jpg">
 <meta property="og:url" content="https://mahmodshaban90-jpg.github.io/icon-sohag/">
 <meta property="og:type" content="website">
@@ -306,6 +306,25 @@ footer .credit a{color:#C9D3CD}
 .js .rv{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
 .js .rv.in{opacity:1;transform:none}
 .js .rv.d1{transition-delay:.08s}.js .rv.d2{transition-delay:.16s}.js .rv.d3{transition-delay:.24s}
+/* ages */
+.ages{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.age{position:relative;background:#fff;border:2px solid var(--line);border-radius:var(--r);padding:28px 22px 24px;display:grid;gap:10px;align-content:start;transition:transform .3s,box-shadow .3s,border-color .3s;overflow:hidden}
+.age:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:transparent}
+.age .em{width:64px;height:64px;border-radius:20px;display:grid;place-items:center;font-size:32px;background:var(--mint)}
+.age .rng{font-family:var(--f-display);font-weight:900;font-size:15px;color:var(--green-d);background:var(--mint);width:max-content;padding:4px 12px;border-radius:999px}
+.age h3{font-size:22px;font-weight:900}
+.age p{color:var(--muted);font-size:16px}
+.age:nth-child(2) .em,.age:nth-child(2) .rng{background:var(--sun-l);color:#B07800}
+.age:nth-child(3) .em,.age:nth-child(3) .rng{background:#EAF6FE;color:#1789CC}
+.age:nth-child(4) .em,.age:nth-child(4) .rng{background:#FFEDE7;color:#D9542F}
+.girls{margin-top:26px;display:grid;grid-template-columns:auto 1fr auto;gap:22px;align-items:center;background:linear-gradient(120deg,#FFF0F4,#FFF7E6);border:2px solid #FFD6E0;border-radius:var(--r);padding:26px 30px}
+.girls .em{width:72px;height:72px;border-radius:22px;background:#fff;display:grid;place-items:center;font-size:36px;box-shadow:var(--shadow)}
+.girls h3{font-size:clamp(20px,2.6vw,26px);font-weight:900}
+.girls h3 em{font-style:normal;color:#E0457B}
+.girls p{color:var(--muted);font-size:16px;margin-top:4px}
+@media (max-width:1060px){.ages{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:540px){.ages{grid-template-columns:1fr}}
+@media (max-width:760px){.girls{grid-template-columns:1fr;text-align:center;justify-items:center;padding:24px 18px}}
 @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -314,7 +333,7 @@ footer .credit a{color:#C9D3CD}
 
 <div class="topbar">
   <div class="wrap">
-    <span class="msg">🎉 أول حصة لابنك مجاناً، احجز مكانه دلوقتي</span>
+    <span class="msg">🎉 أول حصة مجاناً، ليك أو لابنك أو لبنتك. احجز دلوقتي</span>
     <a class="js-call" href="#" id="topPhone"></a>
   </div>
 </div>
@@ -326,6 +345,7 @@ footer .credit a{color:#C9D3CD}
       <span><b>أكاديمية أيكون</b><small>للألعاب الرياضية · فرع سوهاج</small></span>
     </a>
     <nav class="menu" aria-label="أقسام الموقع">
+      <a href="#ages">لكل الأعمار</a>
       <a href="#sports">ألعابنا</a>
       <a href="#quiz">اختبار اللعبة</a>
       <a href="#staff">الإدارة الفنية</a>
@@ -340,9 +360,9 @@ footer .credit a{color:#C9D3CD}
 <main id="home">
   <section class="hero" style="padding-bottom:0">
     <div class="slider" id="slider">
-      <div class="slide on"><img src="https://unsplash.com/photos/y_sf8j3K2ZY/download?w=1600" alt="أطفال بيلعبوا في الملعب"></div>
-      <div class="slide"><img src="https://unsplash.com/photos/jbsr6R7CRik/download?w=1600" alt="أطفال بيلعبوا كرة سلة" loading="lazy"></div>
-      <div class="slide"><img src="https://unsplash.com/photos/ryOMte-FerE/download?w=1600" alt="أطفال في تمرين كاراتيه" loading="lazy"></div>
+      <div class="slide on"><img src="https://unsplash.com/photos/y_sf8j3K2ZY/download?w=1600" alt="تمرين في الملعب"></div>
+      <div class="slide"><img src="https://unsplash.com/photos/jbsr6R7CRik/download?w=1600" alt="تمرين كرة سلة" loading="lazy"></div>
+      <div class="slide"><img src="https://unsplash.com/photos/ryOMte-FerE/download?w=1600" alt="تمرين كاراتيه" loading="lazy"></div>
       <div class="slide"><img src="https://unsplash.com/photos/igvyIrLGXKA/download?w=1600" alt="بنات في تمرين جمباز" loading="lazy"></div>
 
       <div class="floaty f1" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="3"><circle cx="24" cy="24" r="17"/><path d="M7 24h34M24 7v34M12 12c6 6 6 18 0 24M36 12c-6 6-6 18 0 24"/></svg></div>
@@ -352,8 +372,8 @@ footer .credit a{color:#C9D3CD}
       <div class="hero-card">
         <div class="in" id="heroText">
           <span class="badge">⭐ توكيل رسمي من أيكون للألعاب الرياضية</span>
-          <h1 class="slide-txt" id="heroH">أيكون وصلت سوهاج!<br><span>ابنك يستاهل يبقى أيكون</span></h1>
-          <p class="slide-txt" id="heroP">8 ألعاب في مكان واحد، بمنهج تدريب علمي ومدربين متخصصين لكل لعبة.</p>
+          <h1 class="slide-txt" id="heroH">أيكون وصلت سوهاج!<br><span>رياضة لكل الأعمار</span></h1>
+          <p class="slide-txt" id="heroP">من 4 سنين لحد الكبار وطلاب الجامعة. 8 ألعاب بمنهج علمي، ومدربات متخصصات للبنات.</p>
           <div class="cta">
             <a class="btn btn-sun js-trial" href="#" target="_blank" rel="noopener">احجز حصة مجانية</a>
             <a class="btn btn-line" href="#sports">شوف الألعاب</a>
@@ -369,8 +389,29 @@ footer .credit a{color:#C9D3CD}
     <div class="wrap stats">
       <div class="stat rv"><span class="n" data-count="8">8</span><span class="t">ألعاب في مكان واحد</span></div>
       <div class="stat rv d1"><span class="n">علمي</span><span class="t">منهج تدريب مدروس لكل سن</span></div>
-      <div class="stat rv d2"><span class="n" data-count="100" data-suffix="%">100%</span><span class="t">برامج تدريب حسب سن ومستوى الطفل</span></div>
-      <div class="stat rv d3"><span class="n">مجاناً</span><span class="t">أول حصة تجريبية لابنك</span></div>
+      <div class="stat rv d2"><span class="n" data-count="100" data-suffix="%">100%</span><span class="t">برامج حسب سن ومستوى كل متدرب</span></div>
+      <div class="stat rv d3"><span class="n">مجاناً</span><span class="t">أول حصة تجريبية لكل متدرب</span></div>
+    </div>
+  </section>
+
+  <section id="ages">
+    <div class="wrap">
+      <div class="head center rv">
+        <span class="tag"><i></i>لكل الأعمار</span>
+        <h2>أيكون <em>مش للأطفال بس</em></h2>
+        <p>من أول 4 سنين لحد الكبار. كل مرحلة ليها مجموعتها وبرنامجها ومستواها، عشان كل واحد يتمرن مع اللي في سنه.</p>
+      </div>
+      <div class="ages">
+        <article class="age rv"><span class="em">🧒</span><span class="rng">4 - 12 سنة</span><h3>الأطفال</h3><p>أساسيات الحركة والمرونة والثقة بالنفس، بطريقة ممتعة تحببهم في الرياضة.</p></article>
+        <article class="age rv d1"><span class="em">⚡</span><span class="rng">13 - 17 سنة</span><h3>الناشئين</h3><p>تدريب متقدم وتجهيز للبطولات، وبناء لياقة وشخصية قوية.</p></article>
+        <article class="age rv d2"><span class="em">🎓</span><span class="rng">18 - 23 سنة</span><h3>طلاب الجامعة</h3><p>مواعيد تناسب المحاضرات، وفرق وتمارين جماعية، وتطوير مهارات طلاب علوم الرياضة.</p></article>
+        <article class="age rv d3"><span class="em">💪</span><span class="rng">فوق الـ20</span><h3>الكبار</h3><p>لياقة وصحة ورشاقة وتفريغ طاقة بعد الشغل، في أي لعبة من الـ8 ومن أي مستوى.</p></article>
+      </div>
+      <div class="girls rv">
+        <span class="em">👩‍🏫</span>
+        <div><h3>تمارين البنات مع <em>مدربات بنات</em></h3><p>كل الألعاب اللي فيها مجموعات بنات وسيدات بتدربها مدربات متخصصات، في جو مريح ومحترم.</p></div>
+        <a class="btn btn-green js-girls" href="#" target="_blank" rel="noopener">اسألي على مواعيد البنات</a>
+      </div>
     </div>
   </section>
 
@@ -378,7 +419,7 @@ footer .credit a{color:#C9D3CD}
     <div class="wrap">
       <div class="head center rv">
         <span class="tag"><i></i>ألعابنا</span>
-        <h2>اختار <em>اللعبة</em> اللي تناسب ابنك</h2>
+        <h2>اختار <em>اللعبة</em> اللي تناسبك</h2>
         <p>كل لعبة ليها مدرب متخصص وبرنامج متدرّج. دوس على اللعبة واحجز أول حصة مجاناً.</p>
       </div>
       <div class="sports" id="sportsGrid"></div>
@@ -388,9 +429,9 @@ footer .credit a{color:#C9D3CD}
   <section class="why">
     <div class="wrap why-grid">
       <div class="why-img rv">
-        <div class="main"><img src="https://unsplash.com/photos/_rsDatSwl8A/download?w=1200" alt="أطفال بيلعبوا مع بعض" loading="lazy"></div>
+        <div class="main"><img src="https://unsplash.com/photos/_rsDatSwl8A/download?w=1200" alt="متدربين بيلعبوا مع بعض" loading="lazy"></div>
         <div class="chip c1"><b>🏅</b>منهج علمي معتمد</div>
-        <div class="chip c2"><b>👨‍👩‍👧</b>كل إخواتك في مشوار واحد</div>
+        <div class="chip c2"><b>👨‍👩‍👧</b>العيلة كلها تتمرن في مشوار واحد</div>
       </div>
       <div>
         <div class="head rv" style="margin-bottom:26px">
@@ -398,9 +439,9 @@ footer .credit a{color:#C9D3CD}
           <h2>تدريب بمنهج علمي، <em>مش بالفهلوة</em></h2>
         </div>
         <div class="feat">
-          <div class="rv"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span><div><h3>تقييم لياقة في أول حصة</h3><p>سرعة ومرونة وتوازن، عشان نعرف ابنك بيبدأ منين.</p></div></div>
-          <div class="rv d1"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><div><h3>تقرير مستوى كل شهر</h3><p>بيوصلك تطور ابنك أول بأول، وتشوف الفرق بعينك.</p></div></div>
-          <div class="rv d2"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><h3>أمان في كل تمرين</h3><p>أحمال تدريب مناسبة للسن تحمي الطفل من الإصابة.</p></div></div>
+          <div class="rv"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/></svg></span><div><h3>تقييم لياقة في أول حصة</h3><p>سرعة ومرونة وتوازن، عشان نعرف كل متدرب بيبدأ منين.</p></div></div>
+          <div class="rv d1"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></span><div><h3>تقرير مستوى كل شهر</h3><p>بيوصلك تطورك (أو تطور ابنك) أول بأول، وتشوف الفرق بعينك.</p></div></div>
+          <div class="rv d2"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span><div><h3>أمان في كل تمرين</h3><p>أحمال تدريب مناسبة لكل سن تحمي من الإصابة، من الأطفال للكبار.</p></div></div>
           <div class="rv d3"><span class="i"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span><div><h3>بطولات وشهادات</h3><p>مشاركة في بطولات، وشهادة تقدير لكل بطل.</p></div></div>
         </div>
       </div>
@@ -411,8 +452,8 @@ footer .credit a{color:#C9D3CD}
     <div class="wrap quiz">
       <div class="head rv" style="margin:0">
         <span class="tag"><i></i>اختبار سريع</span>
-        <h2>ابنك ينفع في <em>أنهي لعبة؟</em></h2>
-        <p>جاوب على 5 أسئلة بسيطة عن شخصية ابنك أو بنتك، وهنرشّحلك اللعبة الأنسب. وفي أول حصة الكابتن هيأكد الاختيار بتقييم حقيقي.</p>
+        <h2>تنفع في <em>أنهي لعبة؟</em></h2>
+        <p>جاوب على 5 أسئلة بسيطة عنك أو عن ابنك أو بنتك، وهنرشّحلك اللعبة الأنسب. وفي أول حصة الكابتن هيأكد الاختيار بتقييم حقيقي.</p>
       </div>
       <div class="quiz-card rv d1" id="quizCard" aria-live="polite"></div>
     </div>
@@ -422,8 +463,8 @@ footer .credit a{color:#C9D3CD}
     <div class="wrap">
       <div class="head center rv">
         <span class="tag" style="background:#fff"><i></i>الإدارة الفنية</span>
-        <h2>ابنك في <em>إيد أمينة</em></h2>
-        <p>الأكاديمية بيديرها أساتذة من كلية علوم الرياضة.</p>
+        <h2>في <em>إيد أمينة</em></h2>
+        <p>الأكاديمية بيديرها أساتذة من كلية علوم الرياضة، وتمارين البنات مع مدربات متخصصات.</p>
       </div>
       <div class="staff">
         <article class="person rv">
@@ -431,7 +472,7 @@ footer .credit a{color:#C9D3CD}
           <div class="tx">
             <span class="role">المدير الإداري</span>
             <h3>د. السيد رفاعي</h3>
-            <p>عضو هيئة التدريس بقسم الإدارة الرياضية. مسؤول عن تنظيم المواعيد والاشتراكات والتواصل مع أولياء الأمور.</p>
+            <p>عضو هيئة التدريس بقسم الإدارة الرياضية. مسؤول عن تنظيم المواعيد والاشتراكات والتواصل مع المتدربين وأولياء الأمور.</p>
           </div>
         </article>
         <article class="person rv d1">
@@ -459,7 +500,7 @@ footer .credit a{color:#C9D3CD}
           <tbody id="schedBody"></tbody>
         </table>
       </div>
-      <p class="note">خصم للإخوات ولأولاد أعضاء هيئة التدريس بجامعة سوهاج. اسأل على العرض الحالي.</p>
+      <p class="note">مجموعات منفصلة للأطفال والناشئين والكبار، ومجموعات للبنات مع مدربات. خصم للإخوات ولأولاد أعضاء هيئة التدريس بجامعة سوهاج. اسأل على العرض الحالي.</p>
     </div>
   </section>
 
@@ -472,21 +513,21 @@ footer .credit a{color:#C9D3CD}
       </div>
       <div class="join">
         <ol class="steps">
-          <li class="rv"><div><b>اختار اللعبة وبيانات ابنك</b><span>الاسم والسن ورقم ولي الأمر.</span></div></li>
+          <li class="rv"><div><b>اختار اللعبة واكتب بياناتك</b><span>الاسم والسن ورقم الموبايل (ولي الأمر للأطفال).</span></div></li>
           <li class="rv d1"><div><b>ادفع بإنستاباي</b><span>هيظهرلك المبلغ وبيانات التحويل.</span></div></li>
           <li class="rv d2"><div><b>ابعت الإيصال على واتساب</b><span>رسالة جاهزة فيها كل البيانات، وترفق معاها صورة التحويل.</span></div></li>
           <li class="rv d3"><div><b>تأكيد الاشتراك</b><span>الإدارة بتراجع وتبعتلك التأكيد ومعاد أول تمرين.</span></div></li>
         </ol>
         <div class="panel rv d1" id="joinPanel">
-          <h3>احجز لابنك دلوقتي</h3>
+          <h3>احجز ليك أو لابنك دلوقتي</h3>
           <form id="joinForm" novalidate>
             <label for="fSport">اللعبة<select id="fSport"></select></label>
             <div class="row2">
-              <label for="fName">اسم الطفل<input id="fName" autocomplete="off" placeholder="مثلاً: يوسف أحمد"></label>
-              <label for="fAge">السن<input id="fAge" type="number" inputmode="numeric" min="3" max="18" placeholder="بالسنين"></label>
+              <label for="fName">اسم المتدرب<input id="fName" autocomplete="off" placeholder="مثلاً: يوسف أحمد"></label>
+              <label for="fAge">السن<input id="fAge" type="number" inputmode="numeric" min="3" max="70" placeholder="بالسنين"></label>
             </div>
-            <label for="fParent">اسم ولي الأمر<input id="fParent" autocomplete="name" placeholder="الاسم بالكامل"></label>
-            <label for="fPhone">موبايل ولي الأمر<input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr"></label>
+            <label for="fParent" id="parentWrap">اسم ولي الأمر<input id="fParent" autocomplete="name" placeholder="الاسم بالكامل"></label>
+            <label for="fPhone"><span id="phoneLbl">رقم الموبايل</span><input id="fPhone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01xxxxxxxxx" dir="ltr"></label>
             <div class="seg">
               <input type="radio" name="kind" id="kTrial" value="trial" checked><label for="kTrial">حصة تجريبية مجانية</label>
               <input type="radio" name="kind" id="kSub" value="sub"><label for="kSub">اشتراك شهري</label>
@@ -507,11 +548,13 @@ footer .credit a{color:#C9D3CD}
         <h2>عندك <em>سؤال؟</em></h2>
       </div>
       <div class="faq">
-        <details class="rv"><summary>ابني يقدر يبدأ رياضة من سن كام؟</summary><p>الجمباز واللياقة ممكن يبدأوا من سن صغير، وباقي الألعاب حسب سن الطفل ونموّه. في الحصة التجريبية الكابتن بيقيّم ابنك ويقولك الأنسب.</p></details>
+        <details class="rv"><summary>الأكاديمية للأطفال بس؟</summary><p>لأ خالص. عندنا مجموعات للأطفال من 4 سنين، والناشئين، وطلاب الجامعة، والكبار فوق الـ20. كل مجموعة بسنها ومستواها، والحصة التجريبية مجانية للكل.</p></details>
+        <details class="rv"><summary>البنات بيتدربوا مع مين؟</summary><p>مجموعات البنات مع مدربات متخصصات، في جو مريح ومحترم. اسألنا على مواعيد مجموعات البنات في كل لعبة.</p></details>
+        <details class="rv"><summary>ابني يقدر يبدأ رياضة من سن كام؟</summary><p>الجمباز واللياقة ممكن يبدأوا من سن صغير، وباقي الألعاب حسب سن الطفل ونموّه. في الحصة التجريبية الكابتن بيقيّم المستوى ويقولك الأنسب.</p></details>
         <details class="rv"><summary>الحصة التجريبية مجانية فعلاً؟</summary><p>أيوه، أول حصة مجانية بالكامل. احجزها على واتساب أو من فورم الاشتراك تحت.</p></details>
-        <details class="rv"><summary>ينفع ابني يشترك في أكتر من لعبة؟</summary><p>طبعاً، وده من أحلى حاجات أيكون: 8 ألعاب في مكان واحد. اسألنا على عروض الألعاب المتعددة والإخوات.</p></details>
+        <details class="rv"><summary>ينفع أشترك في أكتر من لعبة؟</summary><p>طبعاً، وده من أحلى حاجات أيكون: 8 ألعاب في مكان واحد. اسألنا على عروض الألعاب المتعددة والإخوات.</p></details>
         <details class="rv"><summary>إزاي أدفع الاشتراك؟</summary><p>تقدر تدفع بإنستاباي من البيت، وتبعت صورة التحويل على واتساب، والإدارة بتأكد الاشتراك في نفس اليوم.</p></details>
-        <details class="rv"><summary>ابني يجيب معاه إيه في أول حصة؟</summary><p>لبس رياضي مريح، جزمة رياضية، وزجاجة مياه. وفي الكاراتيه والجمباز الكابتن هيقولك على اللبس المناسب.</p></details>
+        <details class="rv"><summary>أجيب معايا إيه في أول حصة؟</summary><p>لبس رياضي مريح، جزمة رياضية، وزجاجة مياه. وفي الكاراتيه والجمباز الكابتن هيقولك على اللبس المناسب.</p></details>
       </div>
     </div>
   </section>
@@ -519,7 +562,7 @@ footer .credit a{color:#C9D3CD}
   <section style="padding-block:0">
     <div class="wrap">
       <div class="band rv">
-        <div><h2>جاهز تشوف ابنك بطل؟</h2><p>احجز الحصة المجانية النهارده، والأماكن محدودة في كل مجموعة.</p></div>
+        <div><h2>جاهز تبقى أيكون؟</h2><p>احجز الحصة المجانية النهارده ليك أو لولادك، والأماكن محدودة في كل مجموعة.</p></div>
         <a class="btn btn-sun js-trial" href="#" target="_blank" rel="noopener">احجز على واتساب</a>
       </div>
     </div>
@@ -570,12 +613,12 @@ const CONFIG = {
 };
 // price: السعر بالجنيه (null = اسأل على واتساب). ages/days/time: نص حر. img: كود صورة Unsplash
 const SPORTS = [
-  {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة، وأساس أي لعبة تانية.", ages:"", days:"", time:"", price:300},
-  {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس. أحسن بداية لأي طفل.", ages:"", days:"", time:"", price:250},
+  {id:"fitness", name:"لياقة بدنية", img:"M6_W4IpYNEQ", desc:"قوة وسرعة ومرونة. مجموعات للكبار وطلاب الجامعة والبنات.", ages:"", days:"", time:"", price:300},
+  {id:"gym",     name:"جمباز",       img:"kzPJuTb2a5Q", desc:"مرونة وتوازن وثقة بالنفس، للأطفال والبنات والكبار.", ages:"", days:"", time:"", price:250},
   {id:"tennis",  name:"تنس أرضي",    img:"WRByZhruW6o", desc:"تركيز وسرعة رد فعل وتوافق عضلي عصبي.", ages:"", days:"", time:"", price:300},
   {id:"tt",      name:"تنس طاولة",   img:"7h9wGq4IUdE", desc:"سرعة بديهة ودقة وتركيز، ومتعة لكل الأعمار.", ages:"", days:"", time:"", price:250},
   {id:"volley",  name:"كرة طائرة",   img:"aZVpxRydiJk", desc:"روح الفريق والقفز والتوقيت، للبنات والولاد.", ages:"", days:"", time:"", price:250},
-  {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي للطفل اللي طاقته عالية.", ages:"", days:"", time:"", price:250},
+  {id:"hand",    name:"كرة يد",      img:"YN2xypsV_cM", desc:"قوة وسرعة وشغل جماعي لأي حد طاقته عالية.", ages:"", days:"", time:"", price:250},
   {id:"basket",  name:"كرة سلة",     img:"jbsr6R7CRik", desc:"رشاقة ومهارة وتحكم في الكورة وقرار سريع.", ages:"", days:"", time:"", price:250},
   {id:"karate",  name:"كاراتيه",     img:"ryOMte-FerE", desc:"انضباط واحترام ودفاع عن النفس، بأحزمة ومستويات.", ages:"", days:"", time:"", price:250}
 ];
@@ -603,6 +646,11 @@ const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
 document.querySelectorAll(".js-trial").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عايز أحجز حصة تجريبية مجانية في أكاديمية أيكون سوهاج"));
 document.querySelectorAll(".js-wa").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عندي استفسار عن أكاديمية أيكون سوهاج"));
 document.querySelectorAll(".js-call").forEach(a => a.href = "tel:+2" + CONFIG.phone);
+document.querySelectorAll(".js-girls").forEach(a => a.href = wa(CONFIG.whatsappBooking, "السلام عليكم، عايزة أعرف مواعيد مجموعات البنات مع المدربات في أكاديمية أيكون سوهاج"));
+// form: ولي الأمر يظهر بس لو السن أقل من 18
+(function(){ const age = document.getElementById("fAge"), pw = document.getElementById("parentWrap"), pl = document.getElementById("phoneLbl");
+  const f = () => { const v = +age.value, minor = !age.value || v < 18; pw.hidden = !minor; pl.textContent = minor ? "موبايل ولي الأمر" : "رقم موبايلك"; };
+  age.addEventListener("input", f); f(); })();
 $("#waNum").textContent = fmtNum(CONFIG.whatsappBooking);
 $("#callNum").textContent = CONFIG.phone;
 $("#topPhone").textContent = "📞 " + CONFIG.phone;
@@ -617,10 +665,10 @@ $("#track").innerHTML = names + names + names + names;
 // hero slider
 const slides = [...document.querySelectorAll(".slide")];
 const heroCopy = [
-  ["أيكون وصلت سوهاج!<br><span>ابنك يستاهل يبقى أيكون</span>", "8 ألعاب في مكان واحد، بمنهج تدريب علمي ومدربين متخصصين لكل لعبة."],
-  ["كرة سلة وطائرة ويد<br><span>روح الفريق بتبدأ هنا</span>", "ألعاب جماعية بتعلّم ابنك التعاون والقيادة وسرعة القرار."],
+  ["أيكون وصلت سوهاج!<br><span>رياضة لكل الأعمار</span>", "من 4 سنين لحد الكبار وطلاب الجامعة. 8 ألعاب بمنهج علمي، ومدربات متخصصات للبنات."],
+  ["كرة سلة وطائرة ويد<br><span>روح الفريق بتبدأ هنا</span>", "فرق للناشئين وطلاب الجامعة والكبار، ومجموعات بنات مع مدربات."],
   ["كاراتيه بأحزمة ومستويات<br><span>ثقة وانضباط</span>", "دفاع عن النفس واحترام والتزام، مع مدربين متخصصين."],
-  ["جمباز ولياقة<br><span>مرونة وصحة من الصغر</span>", "أحسن بداية لأي طفل قبل ما يختار لعبته."]
+  ["جمباز ولياقة<br><span>لكل سن ولكل مستوى</span>", "للأطفال من الصغر، وللكبار والبنات عشان صحة ورشاقة ولياقة."]
 ];
 const dots = $("#dots");
 slides.forEach((_, i) => { const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-label", "صورة " + (i + 1)); if (!i) b.className = "on"; b.onclick = () => go(i, true); dots.appendChild(b); });
@@ -662,7 +710,7 @@ function pickSport(id){
 
 // quiz
 const QUIZ = [
-  {q:"ابنك/بنتك طاقته عاملة إزاي؟", a:[["⚡ طاقة عالية جداً، مبيقعدش",{hand:2,basket:2,fitness:1,karate:1}],["🎯 نشيط بس بيحب يركز في حاجة",{tennis:2,tt:2}],["🤸 هادي ومرن وبيحب الحركات",{gym:3}]]},
+  {q:"الطاقة عاملة إزاي؟ (ليك أو لابنك)", a:[["⚡ طاقة عالية جداً، مبيقعدش",{hand:2,basket:2,fitness:1,karate:1}],["🎯 نشيط بس بيحب يركز في حاجة",{tennis:2,tt:2}],["🤸 هادي ومرن وبيحب الحركات",{gym:3}]]},
   {q:"بيحب يلعب لوحده ولا مع فريق؟", a:[["👫 مع فريق وصحابه",{volley:2,basket:2,hand:2}],["🧍 لوحده ويتحدى نفسه",{tennis:2,tt:2,karate:1,gym:1}],["🙂 الاتنين عادي",{fitness:2}]]},
   {q:"إيه أكتر حاجة نفسك تبنيها فيه؟", a:[["🥋 الثقة بالنفس والانضباط",{karate:3,gym:1}],["🧠 التركيز وسرعة البديهة",{tt:3,tennis:1}],["💪 اللياقة والصحة",{fitness:3}],["🤝 التعاون والقيادة",{volley:1,basket:1,hand:1}]]},
   {q:"طوله بالنسبة لسنه؟", a:[["📏 أطول من سنه",{basket:2,volley:2}],["👌 متوسط",{hand:1,tennis:1,karate:1}],["🐇 أقصر وخفيف الحركة",{gym:2,tt:1}]]},
@@ -684,7 +732,7 @@ function renderQuiz(){
   } else {
     const r = SPORTS.map(s => [s, score[s.id] || 0]).sort((a, b) => b[1] - a[1]);
     const top = r[0][0];
-    card.innerHTML = `<div class="q-res"><div class="q-step">🎉 ترشيحنا لابنك</div>
+    card.innerHTML = `<div class="q-res"><div class="q-step">🎉 ترشيحنا ليك</div>
       <div class="pick-img"><img src="${IMG(top.img, 900)}" alt="${top.name}"></div>
       <div class="pick">${top.name}</div><p>${top.desc}</p>
       <p class="alt">وممكن كمان يناسبه: ${r[1][0].name} أو ${r[2][0].name}.</p>
@@ -706,13 +754,14 @@ form.addEventListener("submit", e => {
     parent: $("#fParent").value.trim(), phone: $("#fPhone").value.trim().replace(/\s/g, ""),
     kind: form.querySelector('input[name="kind"]:checked').value };
   const err = $("#fErr");
-  if (!d.name || !d.age || !d.parent) { err.textContent = "من فضلك اكتب اسم الطفل وسنه واسم ولي الأمر."; return; }
+  const minor = +d.age < 18;
+  if (!d.name || !d.age || (minor && !d.parent)) { err.textContent = minor || !d.age ? "من فضلك اكتب اسم المتدرب وسنه، واسم ولي الأمر لو السن أقل من 18." : "من فضلك اكتب اسمك وسنك."; return; }
   if (!/^(\+?20|0)?1[0125]\d{8}$/.test(d.phone)) { err.textContent = "رقم الموبايل لازم يكون رقم مصري صحيح، زي 01012345678."; return; }
   err.textContent = "";
   const lines = [d.kind === "trial" ? "طلب حجز حصة تجريبية مجانية - أيكون سوهاج" : "طلب اشتراك شهري - أيكون سوهاج",
-    "اللعبة: " + d.sport.name, "اسم الطفل: " + d.name, "السن: " + d.age, "ولي الأمر: " + d.parent, "الموبايل: " + d.phone];
+    "اللعبة: " + d.sport.name, "اسم المتدرب: " + d.name, "السن: " + d.age].concat(minor ? ["ولي الأمر: " + d.parent] : [], ["الموبايل: " + d.phone]);
   form.hidden = true; payBox.hidden = false;
-  const sum = `<div class="sum"><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>الطفل</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div>`;
+  const sum = `<div class="sum"><div><span>اللعبة</span><b>${d.sport.name}</b></div><div><span>المتدرب</span><b>${esc(d.name)} (${esc(d.age)} سنة)</b></div>`;
   if (d.kind === "trial"){
     payBox.innerHTML = `${sum}<div><span>الطلب</span><b>حصة تجريبية مجانية 🎁</b></div></div>
       <p>دوس على الزرار وابعت الرسالة الجاهزة على واتساب، وهنرد عليك بالمعاد المناسب.</p>
